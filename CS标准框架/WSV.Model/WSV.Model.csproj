@@ -1,0 +1,98 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A1DA163-C72E-4447-A37E-B8F8DF539AAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WSV.Model</RootNamespace>
+    <AssemblyName>WSV.Model</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Count\CountModel.cs" />
+    <Compile Include="Count\C_StatModel.cs" />
+    <Compile Include="Count\D_StatProjectModel.cs" />
+    <Compile Include="Count\D_StatProjectItemModel.cs" />
+    <Compile Include="Hardware\C_Infrared.cs" />
+    <Compile Include="Hardware\C_Rfid.cs" />
+    <Compile Include="Hardware\C_RoadSluice.cs" />
+    <Compile Include="MyLog\DL_Run.cs" />
+    <Compile Include="MainModel.cs" />
+    <Compile Include="MyLog\DL_Maintenance.cs" />
+    <Compile Include="Plan\D_Plan.cs" />
+    <Compile Include="Port\PortModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record\D_CubetyModel.cs" />
+    <Compile Include="Record\D_TypeModel.cs" />
+    <Compile Include="Record\DC_BaseModel.cs" />
+    <Compile Include="Record\D_BaseModel.cs" />
+    <Compile Include="Record\D_CarCodeModel.cs" />
+    <Compile Include="Search\C_SelectModel.cs" />
+    <Compile Include="Search\D_SelectProjectModel.cs" />
+    <Compile Include="Search\SearchModel.cs" />
+    <Compile Include="SysInfo\C_Alias.cs" />
+    <Compile Include="Hardware\C_IdCard.cs" />
+    <Compile Include="Hardware\C_Meter.cs" />
+    <Compile Include="SysInfo\DC_BaseInfo.cs" />
+    <Compile Include="SysInfo\C_DataFormat.cs" />
+    <Compile Include="SysInfo\C_NumDigit.cs" />
+    <Compile Include="SysInfo\C_Weight.cs" />
+    <Compile Include="SysInfo\DC_LoadoMeter.cs" />
+    <Compile Include="SysInfo\D_Bill.cs" />
+    <Compile Include="FilePath.cs" />
+    <Compile Include="SysInfo\Ini_SystemLodad.cs" />
+    <Compile Include="User\CUser.cs" />
+    <Compile Include="User\DC_Power.cs" />
+    <Compile Include="User\D_User.cs" />
+    <Compile Include="User\D_UserRole.cs" />
+    <Compile Include="User\LUser.cs" />
+    <Compile Include="Video\D_Video.cs" />
+    <Compile Include="Weight\NumModel.cs" />
+    <Compile Include="Weight\StateModel.cs" />
+    <Compile Include="Weight\TxtModel.cs" />
+    <Compile Include="Weight\WeightModel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

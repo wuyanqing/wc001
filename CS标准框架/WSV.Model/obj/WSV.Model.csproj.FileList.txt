@@ -1,0 +1,5 @@
+bin\Debug\WSV.Model.dll
+bin\Debug\WSV.Model.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WSV.Model.dll
+obj\Debug\WSV.Model.pdb

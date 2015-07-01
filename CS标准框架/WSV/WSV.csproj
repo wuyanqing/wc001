@@ -1,0 +1,717 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF4CE70C-42C9-4A9A-8861-389B7843D3CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WSV</RootNamespace>
+    <AssemblyName>WSV</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>ICO.ico</ApplicationIcon>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Encrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.OWC11, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MyComm, Version=8.0.3834.25890, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VideoCom, Version=1.0.1.27, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WSV.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WSV.BLL\bin\Debug\WSV.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="WSV.Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WSV.Control\bin\Debug\WSV.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="WSV.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WSV.BLL\bin\Debug\WSV.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass\Error.cs" />
+    <Compile Include="BaseClass\ExportExcel.cs" />
+    <Compile Include="BaseClass\Function.cs" />
+    <Compile Include="BaseClass\MessageBoxFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClass\MessageBoxFrm.Designer.cs">
+      <DependentUpon>MessageBoxFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\PCTool.cs" />
+    <Compile Include="Count\Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count\Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\Infrared.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hardware\Infrared.Designer.cs">
+      <DependentUpon>Infrared.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\Rfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hardware\Rfid.Designer.cs">
+      <DependentUpon>Rfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\RoadSluice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hardware\RoadSluice.Designer.cs">
+      <DependentUpon>RoadSluice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLog\WeightNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLog\WeightNote.Designer.cs">
+      <DependentUpon>WeightNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLog\WeightRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLog\WeightRecord.Designer.cs">
+      <DependentUpon>WeightRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record\CubetyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\CubetyInfo.Designer.cs">
+      <DependentUpon>CubetyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\FrmImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FrmImage.Designer.cs">
+      <DependentUpon>FrmImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticMain\MainFrm.cs" />
+    <Compile Include="Count\FrmCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count\FrmCount.Designer.cs">
+      <DependentUpon>FrmCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Count\FrmCount_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count\FrmCount_Info.Designer.cs">
+      <DependentUpon>FrmCount_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Count\ProjectName_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count\ProjectName_Add.Designer.cs">
+      <DependentUpon>ProjectName_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMain.Designer.cs">
+      <DependentUpon>MenuMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLog\Mylog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLog\Mylog.Designer.cs">
+      <DependentUpon>Mylog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLog\MyOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLog\MyOper.Designer.cs">
+      <DependentUpon>MyOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseClass\MessageBoxFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageBoxFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Count\FrmCount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Count\FrmCount_Info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCount_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Count\Graph.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Count\ProjectName_Add.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectName_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hardware\Infrared.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Infrared.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hardware\Rfid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hardware\RoadSluice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoadSluice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MenuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLog\Mylog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mylog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLog\MyOper.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLog\WeightNote.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WeightNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLog\WeightRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WeightRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\BaseIsUsed.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseIsUsed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\CubetyInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CubetyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\Record_BaseInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Record_BaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\TypeInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\FrmImage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Search_Conditions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Search_Conditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Search_Info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Search_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\Alias.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Alias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\BackUp.resx">
+      <DependentUpon>BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\BaseInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\Bill.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\BillInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hardware\IdCard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IdCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hardware\Meter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Meter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\LoadBll.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadBll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\LoadoMeter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadoMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\Port.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Port.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\SysParam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SysParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysInfo\Voice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Voice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Power.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Power.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\RePwd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Role.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Role_Show.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Role_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\SysLock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SysLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Users.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Record\BaseIsUsed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\BaseIsUsed.Designer.cs">
+      <DependentUpon>BaseIsUsed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record\Record_BaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\Record_BaseInfo.Designer.cs">
+      <DependentUpon>Record_BaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record\TypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\TypeInfo.Designer.cs">
+      <DependentUpon>TypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Search_Conditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\Search_Conditions.Designer.cs">
+      <DependentUpon>Search_Conditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Search_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\Search_Info.Designer.cs">
+      <DependentUpon>Search_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\Alias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\Alias.Designer.cs">
+      <DependentUpon>Alias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\BackUp.Designer.cs">
+      <DependentUpon>BackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\BaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\BaseInfo.Designer.cs">
+      <DependentUpon>BaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\BillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\BillInfo.Designer.cs">
+      <DependentUpon>BillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\IdCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hardware\IdCard.Designer.cs">
+      <DependentUpon>IdCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hardware\Meter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hardware\Meter.Designer.cs">
+      <DependentUpon>Meter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\LoadBll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\LoadBll.Designer.cs">
+      <DependentUpon>LoadBll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\LoadoMeter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\LoadoMeter.Designer.cs">
+      <DependentUpon>LoadoMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\Port.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\Port.Designer.cs">
+      <DependentUpon>Port.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\SysParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\SysParam.Designer.cs">
+      <DependentUpon>SysParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo\Voice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysInfo\Voice.Designer.cs">
+      <DependentUpon>Voice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Power.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Power.Designer.cs">
+      <DependentUpon>Power.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\RePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\RePwd.Designer.cs">
+      <DependentUpon>RePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Role.Designer.cs">
+      <DependentUpon>Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Role_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Role_Show.Designer.cs">
+      <DependentUpon>Role_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\SysLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\SysLock.Designer.cs">
+      <DependentUpon>SysLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Windows.Forms\Windows.Forms.csproj">
+      <Project>{B8C1E086-FCE3-4198-815E-A8762103CE67}</Project>
+      <Name>Windows.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash full.jpg" />
+    <None Include="Resources\settings3.jpg" />
+    <None Include="Resources\downloads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_Fresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AxInterop.MSCommLib.dll" />
+    <Content Include="bin\Debug\AxInterop.OSDLib.dll" />
+    <Content Include="bin\Debug\BaudRate.dll" />
+    <Content Include="bin\Debug\CapturePicture.dll" />
+    <Content Include="bin\Debug\CardParam.dll" />
+    <Content Include="bin\Debug\Chinese.xml" />
+    <Content Include="bin\Debug\COMM.exe" />
+    <Content Include="bin\Debug\Config.dll">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\DBsetup.exe" />
+    <Content Include="bin\Debug\Encrypt.dll" />
+    <Content Include="bin\Debug\FastReport3.dll" />
+    <Content Include="bin\Debug\Interop.Excel.dll" />
+    <Content Include="bin\Debug\Interop.living.dll" />
+    <Content Include="bin\Debug\Interop.MSCommLib.dll" />
+    <Content Include="bin\Debug\Interop.OSDLib.dll" />
+    <Content Include="bin\Debug\Interop.OWC11.dll" />
+    <Content Include="bin\Debug\living.dll" />
+    <Content Include="bin\Debug\living1.dll" />
+    <Content Include="bin\Debug\MediaTransmit.dll" />
+    <Content Include="bin\Debug\Meter.dll">
+      <SubType>
+      </SubType>
+    </Content>
+    <Content Include="bin\Debug\MFC42.DLL" />
+    <Content Include="bin\Debug\Mix.dll" />
+    <Content Include="bin\Debug\MSCOMM32.OCX" />
+    <Content Include="bin\Debug\MyComm.dll" />
+    <Content Include="bin\Debug\Osd.ocx" />
+    <Content Include="bin\Debug\RfidBaudRate.dll" />
+    <Content Include="bin\Debug\RfidParam.dll" />
+    <Content Include="bin\Debug\Sa7134.ocx" />
+    <Content Include="bin\Debug\Sa7134Capture.dll" />
+    <Content Include="bin\Debug\SRR_900X_API_1031.dll" />
+    <Content Include="bin\Debug\VideoCom.dll" />
+    <Content Include="bin\Debug\Voice.dll" />
+    <Content Include="bin\Debug\voice\0.wav" />
+    <Content Include="bin\Debug\voice\1.wav" />
+    <Content Include="bin\Debug\voice\2.wav" />
+    <Content Include="bin\Debug\voice\3.wav" />
+    <Content Include="bin\Debug\voice\4.wav" />
+    <Content Include="bin\Debug\voice\5.wav" />
+    <Content Include="bin\Debug\voice\6.wav" />
+    <Content Include="bin\Debug\voice\7.wav" />
+    <Content Include="bin\Debug\voice\8.wav" />
+    <Content Include="bin\Debug\voice\9.wav" />
+    <Content Include="bin\Debug\voice\万.wav" />
+    <Content Include="bin\Debug\voice\刷卡成功1.wav" />
+    <Content Include="bin\Debug\voice\刷卡成功准备称重.wav" />
+    <Content Include="bin\Debug\voice\刷卡成功准备称重a.wav" />
+    <Content Include="bin\Debug\voice\刷卡成功开始称重.wav" />
+    <Content Include="bin\Debug\voice\千.wav" />
+    <Content Include="bin\Debug\voice\千克.wav" />
+    <Content Include="bin\Debug\voice\吨.wav" />
+    <Content Include="bin\Debug\voice\拾.wav" />
+    <Content Include="bin\Debug\voice\无此卡号.wav" />
+    <Content Include="bin\Debug\voice\点.wav" />
+    <Content Include="bin\Debug\voice\百.wav" />
+    <Content Include="bin\Debug\voice\称重完毕请下磅.wav" />
+    <Content Include="bin\Debug\voice\红外报警.wav" />
+    <Content Include="bin\Debug\voice\请上磅.wav" />
+    <Content Include="bin\Debug\voice\请下磅.wav" />
+    <Content Include="bin\Debug\voice\请勿重复刷卡.wav" />
+    <Content Include="bin\Debug\voice\请勿重复刷卡a.wav" />
+    <Content Include="bin\Debug\voice\越位报警.wav" />
+    <Content Include="bin\Debug\voice\越位报警2.wav" />
+    <Content Include="bin\Debug\voice\重量不稳.wav" />
+    <Content Include="bin\Debug\voice\重量过大.wav" />
+    <Content Include="bin\Debug\xvidcore.dll" />
+    <Content Include="ICO.ico" />
+    <None Include="bin\Debug\Bill\采购单.fr3" />
+    <None Include="bin\Debug\Bill\销售单.fr3" />
+    <None Include="bin\Debug\DataBase\CZGL_Data.sql" />
+    <None Include="bin\Debug\DataBase\CZGL_StoPro.sql" />
+    <None Include="bin\Debug\DataBase\CZGL_Table.sql" />
+    <None Include="bin\Debug\digifaw.ttf" />
+    <None Include="bin\Debug\FastBat.bat" />
+    <None Include="bin\Debug\企业版V11.0说明书.CHM" />
+    <None Include="Resources\main.png" />
+    <None Include="Resources\cs2.png" />
+    <None Include="Resources\logo.ico" />
+    <None Include="Resources\Btn_User.png" />
+    <None Include="Resources\Btn_Check.png" />
+    <None Include="Resources\Btn_Preview.png" />
+    <None Include="Resources\Btn_Design.png" />
+    <None Include="Resources\But_ReName.png" />
+    <None Include="Resources\Btn_IsCheck.png" />
+    <None Include="Resources\Btn_PrintMend.png" />
+    <None Include="Resources\Btn_Search.png" />
+    <None Include="Resources\Btn_Used.png" />
+    <None Include="Resources\Btn_IsUsed.png" />
+    <None Include="Resources\h.png" />
+    <None Include="Resources\Btn_start.png" />
+    <None Include="Resources\Btn_VCount.png" />
+    <None Include="Resources\dl.jpg" />
+    <None Include="Resources\Btn_Pic.png" />
+    <Content Include="Resources\png-0014.png" />
+    <Content Include="Resources\png-0015.png" />
+    <Content Include="Resources\png-0016.png" />
+    <Content Include="Resources\wucheng.ico" />
+    <None Include="Resources\T_M_Voice.png" />
+    <None Include="Resources\Top_Pan_Left.jpg" />
+    <None Include="Resources\T_M_Rfid.png" />
+    <None Include="Resources\T_M_VCount.png" />
+    <None Include="Resources\T_M_Video.png" />
+    <None Include="Resources\T_M_Plan.png" />
+    <None Include="Resources\Tool_Plan.png" />
+    <None Include="Resources\T_M_Table.png" />
+    <None Include="Resources\T_M_LoadoMeter.png" />
+    <None Include="Resources\T_RePwd.png" />
+    <None Include="Resources\SysLock.png" />
+    <None Include="Resources\z.png" />
+    <None Include="Resources\s.png" />
+    <None Include="Resources\T_M_DaoZha.png" />
+    <None Include="Resources\T_M_DaoZha2.png" />
+    <None Include="Resources\T_M_DaoZha1.png" />
+    <None Include="Resources\T_M_BillInfo.png" />
+    <None Include="Resources\T_M_DB.png" />
+    <None Include="Resources\Tool_Search.png" />
+    <None Include="Resources\T_M_WeiParam.png" />
+    <None Include="Resources\T_M_Param.png" />
+    <None Include="Resources\T_M_Info.png" />
+    <None Include="Resources\T_M_AS.png" />
+    <None Include="Resources\T_Port1.png" />
+    <None Include="Resources\T_M_Bill.png" />
+    <None Include="Resources\T_M_Resume.png" />
+    <None Include="Resources\T_M_Cancel.png" />
+    <None Include="Resources\Tool_Count.png" />
+    <None Include="Resources\T_M_Meter.png" />
+    <None Include="Resources\T_M_HunWai.png" />
+    <None Include="Resources\T_M_IDCard.png" />
+    <None Include="Resources\T_M_LogDeal.png" />
+    <None Include="Resources\T_M_LogWeight.png" />
+    <None Include="Resources\T_M_LogDefend.png" />
+    <None Include="Resources\T_M_Power.png" />
+    <None Include="Resources\T_M_Role.png" />
+    <None Include="Resources\T_M_Users.png" />
+    <None Include="Resources\T_M_Check.png" />
+    <None Include="Resources\T_M_IsCheck.png" />
+    <None Include="Resources\T_M_Modify.png" />
+    <None Include="Resources\T_M_Add.png" />
+    <None Include="Resources\T_M_Card.png" />
+    <None Include="Resources\T_M_Car.png" />
+    <None Include="Resources\T_M_Type.png" />
+    <None Include="Resources\T_M_Count.png" />
+    <None Include="Resources\T_M_Base.png" />
+    <None Include="Resources\T_Port.png" />
+    <None Include="Resources\T_M_CarCode.png" />
+    <None Include="Resources\T_M_Select.png" />
+    <None Include="Resources\T_Computer.png" />
+    <None Include="Resources\T_BPrint.png" />
+    <None Include="Resources\T_Weight.png" />
+    <None Include="Resources\T_CountDay.png" />
+    <None Include="Resources\T_Lock.png" />
+    <None Include="Resources\T_Rrelief.png" />
+    <None Include="Resources\T_Count.png" />
+    <None Include="Resources\T_Select.png" />
+    <None Include="Resources\Tool_Help.png" />
+    <None Include="Resources\Tool_BaseInfo.png" />
+    <None Include="Resources\Tool_Defend.png" />
+    <None Include="Resources\Tool_HardWare.png" />
+    <None Include="Resources\Tool_Log.png" />
+    <None Include="Resources\Tool_System.png" />
+    <None Include="Resources\Tool_Users.png" />
+    <None Include="Resources\Tool_Weight.png" />
+    <None Include="Resources\Top_Right.jpg" />
+    <None Include="Resources\Top_Left.jpg" />
+    <None Include="Resources\Bj.jpg" />
+    <None Include="Resources\Btn_Edit.png" />
+    <None Include="Resources\Btn_Preview.ico" />
+    <None Include="Resources\Btn_Export.png" />
+    <None Include="Resources\Btn_Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

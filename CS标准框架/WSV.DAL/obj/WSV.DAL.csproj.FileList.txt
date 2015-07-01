@@ -1,0 +1,5 @@
+bin\Debug\WSV.DAL.dll
+bin\Debug\WSV.DAL.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WSV.DAL.dll
+obj\Debug\WSV.DAL.pdb

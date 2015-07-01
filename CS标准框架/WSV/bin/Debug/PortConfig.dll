@@ -1,0 +1,14 @@
+[systemconfig]
+username=admin
+pass=*+,-.:<D?C
+servername=.
+serverpassword=++99
+database=Weight_zymy_2010
+
+[systemload]
+username=admin
+Displaytype=2
+Tranimage=54
+Trantime=19
+
+

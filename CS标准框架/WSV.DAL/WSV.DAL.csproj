@@ -1,0 +1,92 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D6E90EC-BFD1-4017-BBC6-1CECB1AC7293}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WSV.DAL</RootNamespace>
+    <AssemblyName>WSV.DAL</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Encrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.1.102\Control\Encrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnString.cs" />
+    <Compile Include="Count\CountDal.cs" />
+    <Compile Include="Count\D_StatProjectDal.cs" />
+    <Compile Include="Count\D_StatProjectItemDal.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="DataBaseVisitor.cs" />
+    <Compile Include="MyLog\DL_Run.cs" />
+    <Compile Include="MyLog\DL_WeightVisitor.cs" />
+    <Compile Include="MyLog\D_User.cs" />
+    <Compile Include="MyLog\Modify.cs" />
+    <Compile Include="MyLog\OperData.cs" />
+    <Compile Include="Plan\PlanVisitor.cs" />
+    <Compile Include="Port\PortVisitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record\D_CubetyVisitor.cs" />
+    <Compile Include="Record\D_TypeVisitor.cs" />
+    <Compile Include="Record\DC_BaseVisitor.cs" />
+    <Compile Include="Record\D_BaseVisitor.cs" />
+    <Compile Include="Record\D_CarCodeVisitor.cs" />
+    <Compile Include="Search\SearchDal.cs" />
+    <Compile Include="SysInfo\AliasDAL.cs" />
+    <Compile Include="SysInfo\BaseInfoDAL.cs" />
+    <Compile Include="SysInfo\BillDAL.cs" />
+    <Compile Include="SysInfo\BillInfoDAL.cs" />
+    <Compile Include="SysInfo\LoadoMeterDAL.cs" />
+    <Compile Include="SysInfo\WeightDAL.cs" />
+    <Compile Include="User\PowerDAL.cs" />
+    <Compile Include="User\RoleDAL.cs" />
+    <Compile Include="User\UsersDAL.cs" />
+    <Compile Include="Video\VideoVisitor.cs" />
+    <Compile Include="Weight\CardDAL.cs" />
+    <Compile Include="Weight\PlanDAL.cs" />
+    <Compile Include="Weight\WeightDAL.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\WSV.BLL.dll
+bin\Debug\WSV.BLL.pdb
+bin\Debug\Interop.OWC11.dll
+bin\Debug\WSV.DAL.dll
+bin\Debug\WSV.Model.dll
+bin\Debug\WSV.Model.pdb
+bin\Debug\WSV.DAL.pdb
+obj\Debug\WSV.BLL.dll
+obj\Debug\WSV.BLL.pdb

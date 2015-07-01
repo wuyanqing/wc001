@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <initial>
+    <语音提示>下磅提示</语音提示>
+  </initial>
+  <initial>
+    <语音提示>红外提示</语音提示>
+  </initial>
+  <initial>
+    <语音提示>刷卡提示</语音提示>
+  </initial>
+  <initial>
+    <语音提示>刷卡成功提示</语音提示>
+  </initial>
+  <initial>
+    <下磅提示>请下磅.wav</下磅提示>
+  </initial>
+  <initial>
+    <下磅提示>称重完毕请下磅.wav</下磅提示>
+  </initial>
+  <initial>
+    <刷卡成功提示>刷卡成功1.wav</刷卡成功提示>
+  </initial>
+  <initial>
+    <刷卡成功提示>刷卡成功准备称重a.wav</刷卡成功提示>
+  </initial>
+  <initial>
+    <刷卡提示>请勿重复刷卡.wav</刷卡提示>
+  </initial>
+  <initial>
+    <刷卡提示>无此卡号.wav</刷卡提示>
+  </initial>
+  <initial>
+    <红外提示>红外报警.wav</红外提示>
+  </initial>
+  <initial>
+    <红外提示>越位报警2.wav</红外提示>
+  </initial>
+  <initial>
+    <红外提示>越位报警.wav</红外提示>
+  </initial>
+</NewDataSet>

@@ -26,3 +26,10 @@ D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.Pr
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.csproj.GenerateResource.Cache
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.dll
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.pdb
+D:\Git\sbgl\CS标准框架\WSV.Control\bin\Debug\WSV.Control.dll
+D:\Git\sbgl\CS标准框架\WSV.Control\bin\Debug\WSV.Control.pdb
+D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.Properties.Resources.resources
+D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.csproj.GenerateResource.Cache
+D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.dll
+D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.pdb

@@ -1,0 +1,10 @@
+bin\Debug\Windows.Forms.dll
+bin\Debug\Windows.Forms.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Windows.Forms.Properties.Resources.resources
+obj\Debug\Windows.Forms.Panel.resources
+obj\Debug\Windows.Forms.XPander.XPanderPanel.resources
+obj\Debug\Windows.Forms.XPander.XPanderPanelList.resources
+obj\Debug\Windows.Forms.csproj.GenerateResource.Cache
+obj\Debug\Windows.Forms.dll
+obj\Debug\Windows.Forms.pdb

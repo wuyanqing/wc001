@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <initial>
+    <波特率>300</波特率>
+  </initial>
+  <initial>
+    <波特率>600</波特率>
+  </initial>
+  <initial>
+    <波特率>1200</波特率>
+  </initial>
+  <initial>
+    <波特率>2400</波特率>
+  </initial>
+  <initial>
+    <波特率>4800</波特率>
+  </initial>
+  <initial>
+    <波特率>9600</波特率>
+  </initial>
+  <initial>
+    <波特率>19200</波特率>
+  </initial>
+  <initial>
+    <波特率>38400</波特率>
+  </initial>
+  <initial>
+    <波特率>57600</波特率>
+  </initial>
+  <initial>
+    <波特率>115200</波特率>
+  </initial>
+</NewDataSet>

@@ -26,6 +26,15 @@ D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.Pr
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.csproj.GenerateResource.Cache
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.dll
 D:\程序软件\程序软件\CS标准框架\WSV.Control\obj\Debug\WSV.Control.pdb
+<<<<<<< HEAD
+E:\git\wc001mast\CS标准框架\WSV.Control\bin\Debug\WSV.Control.dll
+E:\git\wc001mast\CS标准框架\WSV.Control\bin\Debug\WSV.Control.pdb
+E:\git\wc001mast\CS标准框架\WSV.Control\obj\Debug\ResolveAssemblyReference.cache
+E:\git\wc001mast\CS标准框架\WSV.Control\obj\Debug\WSV.Control.Properties.Resources.resources
+E:\git\wc001mast\CS标准框架\WSV.Control\obj\Debug\WSV.Control.csproj.GenerateResource.Cache
+E:\git\wc001mast\CS标准框架\WSV.Control\obj\Debug\WSV.Control.dll
+E:\git\wc001mast\CS标准框架\WSV.Control\obj\Debug\WSV.Control.pdb
+=======
 D:\Git\sbgl\CS标准框架\WSV.Control\bin\Debug\WSV.Control.dll
 D:\Git\sbgl\CS标准框架\WSV.Control\bin\Debug\WSV.Control.pdb
 D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\ResolveAssemblyReference.cache
@@ -33,3 +42,4 @@ D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.Properties.Resource
 D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.csproj.GenerateResource.Cache
 D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.dll
 D:\Git\sbgl\CS标准框架\WSV.Control\obj\Debug\WSV.Control.pdb
+>>>>>>> wuyanqing/master

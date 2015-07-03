@@ -48,6 +48,7 @@
     <Compile Include="Count\C_StatModel.cs" />
     <Compile Include="Count\D_StatProjectModel.cs" />
     <Compile Include="Count\D_StatProjectItemModel.cs" />
+    <Compile Include="EquipmentInfo\Sys_EquipmentInfo.cs" />
     <Compile Include="Hardware\C_Infrared.cs" />
     <Compile Include="Hardware\C_Rfid.cs" />
     <Compile Include="Hardware\C_RoadSluice.cs" />

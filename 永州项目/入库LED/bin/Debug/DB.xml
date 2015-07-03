@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Connections>
+  <Connection Name="DefaultConnection" DatabaseType="SQLSERVER">
+    <ConnectionString Value="server=.;database=wms_rfid_db;uid=sa;" />
+    <Password Name="password" Value="65CED0851FFD283F" />
+  </Connection>
+</Connections>

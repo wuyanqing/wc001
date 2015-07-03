@@ -1,0 +1,154 @@
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.DBAccessing.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.HashOrm.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\ESBasic.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.HashOrm.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.DBAccessing.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.HashOrm.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\ESBasic.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.HashOrm.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［04］［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\C# LED 程序\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［04］［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\C# LED 程序\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\dell\Desktop\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+C:\Users\dell\Desktop\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\dell\Desktop\LEDSHOW\bin\Debug\LEDSHOW.pdb
+C:\Users\dell\Desktop\LEDSHOW\bin\Debug\ESBasic.dll
+D:\Soft\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\Soft\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\Soft\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\Soft\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\Soft\LEDSHOW\bin\Debug\ESBasic.dll
+D:\Soft\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\Soft\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\Soft\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\Soft\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+F:\[9]武威项目资料\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.read.1.tlog
+D:\武威\现场程序备份0516\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\zqloon\Desktop\分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\zqloon\Desktop\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.read.1.tlog
+E:\git\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.write.1.tlog
+E:\git\天水分拣车间LED\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+E:\git\天水分拣车间LED\LEDSHOW\obj\Debug\LEDSHOW.exe
+E:\git\天水分拣车间LED\LEDSHOW\obj\Debug\LEDSHOW.pdb
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.read.1.tlog
+E:\git\thok_ts_sort.git\src\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\天水分拣车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.pdb
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\天水补货车间LED2\天水分拣车间LED\LEDSHOW[原始版本]\LEDSHOW\bin\Debug\LEDSHOW.pdb
+C:\Users\Z\Desktop\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+C:\Users\Z\Desktop\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+C:\Users\Z\Desktop\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+C:\Users\Z\Desktop\LEDSHOW\bin\Debug\LEDSHOW.exe.config
+C:\Users\Z\Desktop\LEDSHOW\bin\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\LEDSHOW\bin\Debug\LEDSHOW.pdb
+C:\Users\Z\Desktop\LEDSHOW\obj\Debug\LEDSHOW.exe
+C:\Users\Z\Desktop\LEDSHOW\obj\Debug\LEDSHOW.pdb
+E:\git\大庆led\大庆入库LED\bin\Debug\LEDSHOW.exe.config
+E:\git\大庆led\大庆入库LED\obj\Debug\LEDSHOW.exe
+E:\git\大庆led\大庆入库LED\obj\Debug\LEDSHOW.pdb
+E:\git\大庆led\大庆入库LED\bin\Debug\LEDSHOW.exe
+E:\git\大庆led\大庆入库LED\bin\Debug\LEDSHOW.pdb
+E:\git\大庆led\大庆入库LED\obj\Debug\ResolveAssemblyReference.cache
+E:\git\大庆led\大庆入库LED\obj\Debug\LEDSHOW.OrderList.resources
+E:\git\大庆led\大庆入库LED\obj\Debug\LEDSHOW.Properties.Resources.resources
+E:\git\大庆led\大庆入库LED\obj\Debug\GenerateResource.read.1.tlog
+E:\git\大庆led\大庆入库LED\obj\Debug\GenerateResource.write.1.tlog
+E:\git\wc001mast\永州显示屏\大庆入库LED\bin\Debug\LEDSHOW.exe.config
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\LEDSHOW.exe
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\LEDSHOW.pdb
+E:\git\wc001mast\永州显示屏\大庆入库LED\bin\Debug\LEDSHOW.exe
+E:\git\wc001mast\永州显示屏\大庆入库LED\bin\Debug\LEDSHOW.pdb
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\ResolveAssemblyReference.cache
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\LEDSHOW.OrderList.resources
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\LEDSHOW.Properties.Resources.resources
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\GenerateResource.read.1.tlog
+E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\GenerateResource.write.1.tlog
+E:\git\wc001mast\永州显示屏\入库LED\bin\Debug\LEDSHOW.exe.config
+E:\git\wc001mast\永州显示屏\入库LED\obj\Debug\LEDSHOW.exe
+E:\git\wc001mast\永州显示屏\入库LED\obj\Debug\LEDSHOW.pdb

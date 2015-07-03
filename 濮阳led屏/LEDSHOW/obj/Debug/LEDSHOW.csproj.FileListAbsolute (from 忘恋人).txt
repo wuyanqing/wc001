@@ -1,0 +1,28 @@
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.DBAccessing.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.HashOrm.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\ESBasic.dll
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\bin\Debug\DataRabbit.HashOrm.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\［项目_现场］\代码\电子标签系统\新控件 LabelServer\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\ResolveAssemblyReference.cache
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.OrderList.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.Properties.Resources.resources
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.csproj.GenerateResource.Cache
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\LEDSHOW.exe
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\LEDSHOW.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.DBAccessing.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.HashOrm.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\ESBasic.dll
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\bin\Debug\DataRabbit.HashOrm.pdb
+D:\［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［04］［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\C# LED 程序\LEDSHOW\obj\Debug\LEDSHOW.exe
+D:\［04］［软件_资料］\我的资料库\[00] 我的开发空间\[00]代码目录\C# LED 程序\LEDSHOW\obj\Debug\LEDSHOW.pdb

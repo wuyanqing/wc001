@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DataConfig>
+    <IP>192.168.1.199</IP>
+    <DbName>xtdps</DbName>
+    <User>sa</User>
+    <Pwd>123456</Pwd>
+  </DataConfig>
+</Root>

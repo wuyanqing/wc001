@@ -429,6 +429,68 @@ CREATE TABLE [dbo].[Sys_WarningInfo](
 ) ON [PRIMARY]
 
 GO
+USE [sbgl ]
+GO
+
+/****** Object:  Table [dbo].[Bus_RegistrationInfo]    Script Date: 07/03/2015 20:06:51 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Bus_RegistrationInfo](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NULL,
+	[billno] [varchar](50) NOT NULL,
+	[carcode] [varchar](50) NULL,
+	[phone] [varchar](50) NOT NULL,
+	[daytime] [datetime] NOT NULL,
+	[state] [varchar](10) NOT NULL,
+	[memo] [varchar](50) NULL,
+	[port] [varchar](10) NULL,
+	[address] [varchar](50) NOT NULL,
+	[isSubmit] [char](1) NOT NULL,
+	[iswork] [char](1) NOT NULL,
+ CONSTRAINT [PK_RegistrationInfo] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [sbgl ]
+GO
+
+/****** Object:  Table [dbo].[Bus_productAddress]    Script Date: 07/03/2015 20:07:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Bus_productAddress](
+	[product_address_code] [varchar](50) NOT NULL,
+	[product_address_name] [nchar](10) NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
 
 
 

@@ -1,0 +1,8 @@
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\ResolveAssemblyReference.cache
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\Interop.SpeechLib.dll
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\delivery.csproj.ResolveComReference.cache
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\delivery.Add.resources
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\delivery.allinformation.resources
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\delivery.Properties.Resources.resources
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\GenerateResource.read.1.tlog
+E:\git\wc001mast\永州显示屏\送货司机登记系统\registration\delivery\obj\x86\Release\GenerateResource.write.1.tlog

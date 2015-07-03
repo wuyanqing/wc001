@@ -38,6 +38,7 @@ D:\程序软件\程序软件\CS标准框架\Windows.Forms\obj\Debug\Windows.Form
 D:\程序软件\程序软件\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.csproj.GenerateResource.Cache
 D:\程序软件\程序软件\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.dll
 D:\程序软件\程序软件\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.pdb
+<<<<<<< HEAD
 E:\git\wc001mast\CS标准框架\Windows.Forms\bin\Debug\Windows.Forms.dll
 E:\git\wc001mast\CS标准框架\Windows.Forms\bin\Debug\Windows.Forms.pdb
 E:\git\wc001mast\CS标准框架\Windows.Forms\obj\Debug\ResolveAssemblyReference.cache
@@ -48,3 +49,15 @@ E:\git\wc001mast\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.XPander.XP
 E:\git\wc001mast\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.csproj.GenerateResource.Cache
 E:\git\wc001mast\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.dll
 E:\git\wc001mast\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.pdb
+=======
+D:\Git\sbgl\CS标准框架\Windows.Forms\bin\Debug\Windows.Forms.dll
+D:\Git\sbgl\CS标准框架\Windows.Forms\bin\Debug\Windows.Forms.pdb
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.Properties.Resources.resources
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.Panel.resources
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.XPander.XPanderPanel.resources
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.XPander.XPanderPanelList.resources
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.csproj.GenerateResource.Cache
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.dll
+D:\Git\sbgl\CS标准框架\Windows.Forms\obj\Debug\Windows.Forms.pdb
+>>>>>>> wuyanqing/master

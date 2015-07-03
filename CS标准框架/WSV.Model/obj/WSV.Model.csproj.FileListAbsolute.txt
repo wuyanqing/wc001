@@ -18,8 +18,16 @@ D:\程序软件\程序软件\CS标准框架\WSV.Model\bin\Debug\WSV.Model.pdb
 D:\程序软件\程序软件\CS标准框架\WSV.Model\obj\Debug\ResolveAssemblyReference.cache
 D:\程序软件\程序软件\CS标准框架\WSV.Model\obj\Debug\WSV.Model.dll
 D:\程序软件\程序软件\CS标准框架\WSV.Model\obj\Debug\WSV.Model.pdb
+<<<<<<< HEAD
 E:\git\wc001mast\CS标准框架\WSV.Model\bin\Debug\WSV.Model.dll
 E:\git\wc001mast\CS标准框架\WSV.Model\bin\Debug\WSV.Model.pdb
 E:\git\wc001mast\CS标准框架\WSV.Model\obj\Debug\ResolveAssemblyReference.cache
 E:\git\wc001mast\CS标准框架\WSV.Model\obj\Debug\WSV.Model.dll
 E:\git\wc001mast\CS标准框架\WSV.Model\obj\Debug\WSV.Model.pdb
+=======
+D:\Git\sbgl\CS标准框架\WSV.Model\bin\Debug\WSV.Model.dll
+D:\Git\sbgl\CS标准框架\WSV.Model\bin\Debug\WSV.Model.pdb
+D:\Git\sbgl\CS标准框架\WSV.Model\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\sbgl\CS标准框架\WSV.Model\obj\Debug\WSV.Model.dll
+D:\Git\sbgl\CS标准框架\WSV.Model\obj\Debug\WSV.Model.pdb
+>>>>>>> wuyanqing/master

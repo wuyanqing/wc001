@@ -81,24 +81,6 @@
     <Compile Include="Count\Graph.Designer.cs">
       <DependentUpon>Graph.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hardware\Infrared.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hardware\Infrared.Designer.cs">
-      <DependentUpon>Infrared.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hardware\Rfid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hardware\Rfid.Designer.cs">
-      <DependentUpon>Rfid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hardware\RoadSluice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hardware\RoadSluice.Designer.cs">
-      <DependentUpon>RoadSluice.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyLog\WeightNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,18 +170,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>ProjectName_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hardware\Infrared.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Infrared.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hardware\Rfid.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Rfid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hardware\RoadSluice.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RoadSluice.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Main.cs</DependentUpon>
@@ -272,22 +242,6 @@
     <EmbeddedResource Include="SysInfo\Bill.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Bill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SysInfo\BillInfo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>BillInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hardware\IdCard.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>IdCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hardware\Meter.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Meter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SysInfo\LoadBll.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>LoadBll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysInfo\LoadoMeter.resx">
       <SubType>Designer</SubType>
@@ -400,30 +354,6 @@
     </Compile>
     <Compile Include="SysInfo\Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SysInfo\BillInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SysInfo\BillInfo.Designer.cs">
-      <DependentUpon>BillInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hardware\IdCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hardware\IdCard.Designer.cs">
-      <DependentUpon>IdCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hardware\Meter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hardware\Meter.Designer.cs">
-      <DependentUpon>Meter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SysInfo\LoadBll.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SysInfo\LoadBll.Designer.cs">
-      <DependentUpon>LoadBll.cs</DependentUpon>
     </Compile>
     <Compile Include="SysInfo\LoadoMeter.cs">
       <SubType>Form</SubType>
@@ -705,6 +635,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\data\" />
+    <Folder Include="Hardware\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

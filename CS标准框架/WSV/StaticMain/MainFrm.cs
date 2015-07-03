@@ -6,7 +6,7 @@ namespace WSV.StaticMain
 {
     public static class MainFrm
     {
-        public const string Version = "VideoWeight";       //版本
+        //public const string Version = "VideoWeight";       //版本
         public static Main FrmMain;
 
         //判断子窗体是否打开

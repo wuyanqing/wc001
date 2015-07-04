@@ -35,10 +35,6 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTimeTxt = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbstate = new System.Windows.Forms.Label();
-            this.btnswitch = new System.Windows.Forms.Button();
-            this.btnstop = new System.Windows.Forms.Button();
-            this.btnstart = new System.Windows.Forms.Button();
             this.lblCurrentRoute2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,10 +59,26 @@
             this.ForeShow = new System.Windows.Forms.ToolStripMenuItem();
             this.BackShow = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitScreen = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,15 +128,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.lbstate);
-            this.panel2.Controls.Add(this.btnswitch);
-            this.panel2.Controls.Add(this.btnstop);
-            this.panel2.Controls.Add(this.btnstart);
-            this.panel2.Controls.Add(this.lblCurrentRoute2);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.lblCurrentRoute);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.lblTimeTxt);
             this.panel2.Controls.Add(this.lblTime);
@@ -134,56 +139,12 @@
             this.panel2.Size = new System.Drawing.Size(512, 221);
             this.panel2.TabIndex = 1;
             // 
-            // lbstate
-            // 
-            this.lbstate.AutoSize = true;
-            this.lbstate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbstate.ForeColor = System.Drawing.Color.Red;
-            this.lbstate.Location = new System.Drawing.Point(233, 188);
-            this.lbstate.Name = "lbstate";
-            this.lbstate.Size = new System.Drawing.Size(64, 22);
-            this.lbstate.TabIndex = 40;
-            this.lbstate.Text = "调度中";
-            // 
-            // btnswitch
-            // 
-            this.btnswitch.BackColor = System.Drawing.Color.Azure;
-            this.btnswitch.ForeColor = System.Drawing.Color.Red;
-            this.btnswitch.Location = new System.Drawing.Point(403, 189);
-            this.btnswitch.Name = "btnswitch";
-            this.btnswitch.Size = new System.Drawing.Size(75, 23);
-            this.btnswitch.TabIndex = 39;
-            this.btnswitch.Text = "切换下辆车";
-            this.btnswitch.UseVisualStyleBackColor = false;
-            // 
-            // btnstop
-            // 
-            this.btnstop.BackColor = System.Drawing.Color.Azure;
-            this.btnstop.ForeColor = System.Drawing.Color.Red;
-            this.btnstop.Location = new System.Drawing.Point(129, 189);
-            this.btnstop.Name = "btnstop";
-            this.btnstop.Size = new System.Drawing.Size(75, 23);
-            this.btnstop.TabIndex = 38;
-            this.btnstop.Text = "停止调度";
-            this.btnstop.UseVisualStyleBackColor = false;
-            // 
-            // btnstart
-            // 
-            this.btnstart.BackColor = System.Drawing.Color.Azure;
-            this.btnstart.ForeColor = System.Drawing.Color.Red;
-            this.btnstart.Location = new System.Drawing.Point(28, 189);
-            this.btnstart.Name = "btnstart";
-            this.btnstart.Size = new System.Drawing.Size(75, 23);
-            this.btnstart.TabIndex = 37;
-            this.btnstart.Text = "开始调度";
-            this.btnstart.UseVisualStyleBackColor = false;
-            // 
             // lblCurrentRoute2
             // 
             this.lblCurrentRoute2.AutoSize = true;
             this.lblCurrentRoute2.Font = new System.Drawing.Font("宋体", 10F);
             this.lblCurrentRoute2.ForeColor = System.Drawing.Color.Red;
-            this.lblCurrentRoute2.Location = new System.Drawing.Point(368, 3);
+            this.lblCurrentRoute2.Location = new System.Drawing.Point(92, 34);
             this.lblCurrentRoute2.Name = "lblCurrentRoute2";
             this.lblCurrentRoute2.Size = new System.Drawing.Size(28, 14);
             this.lblCurrentRoute2.TabIndex = 36;
@@ -194,7 +155,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 10F);
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(287, 3);
+            this.label6.Location = new System.Drawing.Point(2, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 14);
             this.label6.TabIndex = 35;
@@ -205,11 +166,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 10F);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(402, 3);
+            this.label1.Location = new System.Drawing.Point(135, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 14);
             this.label1.TabIndex = 34;
-            this.label1.Text = "已入数量:";
+            this.label1.Text = "未入数量:";
             // 
             // label5
             // 
@@ -226,7 +187,7 @@
             this.lblCurrentRoute.AutoSize = true;
             this.lblCurrentRoute.Font = new System.Drawing.Font("宋体", 10F);
             this.lblCurrentRoute.ForeColor = System.Drawing.Color.Red;
-            this.lblCurrentRoute.Location = new System.Drawing.Point(472, 3);
+            this.lblCurrentRoute.Location = new System.Drawing.Point(213, 34);
             this.lblCurrentRoute.Name = "lblCurrentRoute";
             this.lblCurrentRoute.Size = new System.Drawing.Size(28, 14);
             this.lblCurrentRoute.TabIndex = 32;
@@ -235,7 +196,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.lblCurrentRoute2);
+            this.groupBox1.Controls.Add(this.lblCurrentRoute);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lblBatchValue);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -246,26 +211,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(9, 26);
+            this.groupBox1.Location = new System.Drawing.Point(3, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 156);
+            this.groupBox1.Size = new System.Drawing.Size(247, 182);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "入库明细 ";
+            this.groupBox1.Text = "1号链板机入库明细 ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(114, 130);
+            this.label11.Location = new System.Drawing.Point(85, 62);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 17);
             this.label11.TabIndex = 18;
-            this.label11.Text = "5辆";
+            this.label11.Text = "3辆";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 130);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(6, 62);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 17;
@@ -274,7 +240,7 @@
             // lblBatchValue
             // 
             this.lblBatchValue.AutoSize = true;
-            this.lblBatchValue.Location = new System.Drawing.Point(339, 66);
+            this.lblBatchValue.Location = new System.Drawing.Point(213, 130);
             this.lblBatchValue.Name = "lblBatchValue";
             this.lblBatchValue.Size = new System.Drawing.Size(28, 17);
             this.lblBatchValue.TabIndex = 16;
@@ -283,7 +249,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(238, 103);
+            this.label9.Location = new System.Drawing.Point(141, 158);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 17);
             this.label9.TabIndex = 15;
@@ -292,7 +258,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(117, 105);
+            this.label8.Location = new System.Drawing.Point(85, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 14;
@@ -301,7 +267,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(148, 29);
+            this.label3.Location = new System.Drawing.Point(85, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 13;
@@ -310,25 +276,26 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(11, 63);
+            this.label13.Location = new System.Drawing.Point(4, 130);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 22);
+            this.label13.Size = new System.Drawing.Size(78, 17);
             this.label13.TabIndex = 12;
             this.label13.Text = "入库进度：";
             // 
             // PbarBatch
             // 
-            this.PbarBatch.Location = new System.Drawing.Point(117, 63);
+            this.PbarBatch.Location = new System.Drawing.Point(88, 125);
             this.PbarBatch.Name = "PbarBatch";
-            this.PbarBatch.Size = new System.Drawing.Size(207, 23);
+            this.PbarBatch.Size = new System.Drawing.Size(104, 23);
             this.PbarBatch.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 103);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.Location = new System.Drawing.Point(4, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 17);
             this.label10.TabIndex = 8;
@@ -337,11 +304,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(11, 26);
+            this.label4.Location = new System.Drawing.Point(6, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 22);
+            this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "正在入库：";
             // 
@@ -405,6 +372,169 @@
             this.ExitScreen.Text = "退出LED显示屏";
             this.ExitScreen.Click += new System.EventHandler(this.ExitScreen_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.progressBar1);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Red;
+            this.groupBox2.Location = new System.Drawing.Point(253, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(247, 179);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "2号链板机入库明细 ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(85, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 17);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "2辆";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(96, 31);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 14);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "300";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(213, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(28, 14);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "100";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label16.Location = new System.Drawing.Point(6, 62);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(92, 17);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "待卸车辆数：";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 10F);
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(135, 31);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 14);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "未入数量:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("宋体", 10F);
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(6, 31);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 14);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "入库总数量:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(213, 130);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(28, 17);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "0%";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(141, 158);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 17);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "入库总量";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(85, 158);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(50, 17);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "车牌号";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(85, 94);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(50, 17);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "车牌号";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(4, 130);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(78, 17);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "入库进度：";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(88, 125);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(104, 23);
+            this.progressBar1.TabIndex = 11;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label24.Location = new System.Drawing.Point(4, 158);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(78, 17);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "准备入库：";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.Location = new System.Drawing.Point(6, 94);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(78, 17);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "正在入库：";
+            // 
             // OrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -429,6 +559,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -462,12 +594,23 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ProgressBar PbarBatch;
-        private System.Windows.Forms.Button btnswitch;
-        private System.Windows.Forms.Button btnstop;
-        private System.Windows.Forms.Button btnstart;
-        private System.Windows.Forms.Label lbstate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
 
     }
 }

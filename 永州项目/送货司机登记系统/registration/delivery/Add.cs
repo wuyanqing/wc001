@@ -17,7 +17,6 @@ namespace delivery
         public Add()
         {
             InitializeComponent();
-            cobstate.SelectedIndex = 0;
         }
 
         private void btncancel_Click(object sender, EventArgs e)
@@ -32,8 +31,6 @@ namespace delivery
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            SpeechVoiceSpeakFlags SpFlags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
-            SpVoice Voice = new SpVoice();
             registrationinformation._carcode = txbcarcode.Text;
             registrationinformation._billno = txbbillno.Text;
             registrationinformation._phone = txbphone.Text;
@@ -49,7 +46,7 @@ namespace delivery
             string log = "";
             if (da.addRegistrationInfo(registrationinformation, out log))
             {
-                Voice.Speak(voices, SpFlags);
+                Voice(voices);
                 this.Dispose();
                 DataTable dt = da.registrationInfo();
                 allinformationFrom.dataGridView1.DataSource = dt;
@@ -59,5 +56,16 @@ namespace delivery
                 MessageBox.Show(log);
             }
         }
+        /// <summary>
+        /// 当未提交送货单车辆数<=2，语音提醒该车辆提交送货单
+        /// </summary>0：未提交 1：已提交  2：卸货中  3 卸货完成
+        /// <param name="voices"></param>
+        public void Voice(string voices)
+        {
+            SpeechVoiceSpeakFlags SpFlags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+            SpVoice Voice = new SpVoice();
+            Voice.Speak(voices, SpFlags);
+        }
+
     }
 }

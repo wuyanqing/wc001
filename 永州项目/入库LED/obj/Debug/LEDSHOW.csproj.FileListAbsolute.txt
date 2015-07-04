@@ -152,3 +152,13 @@ E:\git\wc001mast\永州显示屏\大庆入库LED\obj\Debug\GenerateResource.writ
 E:\git\wc001mast\永州显示屏\入库LED\bin\Debug\LEDSHOW.exe.config
 E:\git\wc001mast\永州显示屏\入库LED\obj\Debug\LEDSHOW.exe
 E:\git\wc001mast\永州显示屏\入库LED\obj\Debug\LEDSHOW.pdb
+E:\git\wc001mast\永州项目\入库LED\bin\Debug\LEDSHOW.exe.config
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\LEDSHOW.exe
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\LEDSHOW.pdb
+E:\git\wc001mast\永州项目\入库LED\bin\Debug\LEDSHOW.exe
+E:\git\wc001mast\永州项目\入库LED\bin\Debug\LEDSHOW.pdb
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\ResolveAssemblyReference.cache
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\LEDSHOW.OrderList.resources
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\LEDSHOW.Properties.Resources.resources
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\GenerateResource.read.1.tlog
+E:\git\wc001mast\永州项目\入库LED\obj\Debug\GenerateResource.write.1.tlog

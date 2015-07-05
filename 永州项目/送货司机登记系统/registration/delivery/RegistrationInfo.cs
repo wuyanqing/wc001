@@ -6,6 +6,13 @@ namespace delivery
 {
     public class RegistrationInfo
     {
+        private int id;//登记人姓名
+
+        public int _id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         private string  name;//登记人姓名
 
         public string _name
@@ -74,18 +81,11 @@ namespace delivery
             get { return address; }
             set { address = value; }
         }
-        private string isSubmit;//是否提交订单
-        public string _isSubmit
+        private string workstate;//工作状态
+        public string _workstate
         {
-            get { return isSubmit; }
-            set { isSubmit = value; }
-        }
-
-        private string iswork;//是否开始卸货
-        public string _iswork
-        {
-            get { return iswork; }
-            set { iswork = value; }
+            get { return workstate; }
+            set { workstate = value; }
         }
     }
 }

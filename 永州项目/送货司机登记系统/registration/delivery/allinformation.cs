@@ -16,31 +16,54 @@ namespace delivery
         public allinformation()
         {
             Sunisoft.IrisSkin.SkinEngine skin = new Sunisoft.IrisSkin.SkinEngine();
-            skin.SkinFile = "Wave.ssk";
+            skin.SkinFile = "MP10.ssk";
             skin.Active = true;
             InitializeComponent();
-            DataTable dt = da.registrationInfo();
-            dataGridView1.DataSource = dt;
+            getDataGridView();
         }
 
         private void btnquery_Click(object sender, EventArgs e)
         {
             DataTable dt = da.registrationInfo(dateTimePicker1.Value, dateTimePicker2.Value);
             dataGridView1.DataSource = dt;
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            try
+            add = new Add(0,this);
+            add.Owner = this;
+            add.ShowDialog();   
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.RowHeadersWidth = 60;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                add.Show();
-                add.Focus();
+                int j = i + 1;
+                dataGridView1.Rows[i].HeaderCell.Value = j.ToString();
             }
-            catch
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+             /*判断点击行标题与列标题*/
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                add = new Add();
+                /*传员工工号过去*/
+                int  id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                Add add = new Add(id,this);
                 add.Show();
             }
         }
+
+        public void getDataGridView()
+        {
+            DataTable dt = new DataTable();
+            dt=da.registrationInfo("");
+            dataGridView1.DataSource = dt;
+            dataGridView1.AllowUserToAddRows = false;
+        }   
     }
 }

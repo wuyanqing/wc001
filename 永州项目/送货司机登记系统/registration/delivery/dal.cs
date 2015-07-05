@@ -13,7 +13,7 @@ namespace delivery
         {
             using (PersistentManager pm = new PersistentManager())
             {
-                string sql = @"select id, name,billno,carcode,phone,daytime,state,port+'号链板机' port,b.address_name
+                string sql = @"select id, name,brandno,carcode,phone,daytime,state,port+'号链板机' port,b.address_name
                                 ,case workstate  when 0 then '未提交'  when 1 then' 已提交' when 2 then' 卸货中' when 3 then' 已完成' end  workstate
                                 from Bus_RegistrationInfo a 
                                 left join Bus_productAddress b on a.address_code=b.address_code where daytime>='{0}' and  daytime<'{1}'  order by id";
@@ -25,7 +25,7 @@ namespace delivery
         {
             using (PersistentManager pm = new PersistentManager())
             {
-                string sql = @"select id, name,billno,carcode,phone,daytime,state,port+'号链板机' port,b.address_name
+                string sql = @"select id, name,brandno,carcode,phone,daytime,state,port+'号链板机' port,b.address_name
                                 ,case workstate  when 0 then '未提交'  when 1 then' 已提交' when 2 then' 卸货中' when 3 then' 已完成' end  workstate
                                 from Bus_RegistrationInfo a 
                                 left join Bus_productAddress b on a.address_code=b.address_code  {0} order by id desc";
@@ -60,8 +60,8 @@ namespace delivery
             {
                 if (registrationInfo("where id='" + registrationinformation._id + "'").Rows.Count > 0)
                 {
-                    sql = string.Format("update Bus_RegistrationInfo set billno='{0}',carcode='{1}',phone='{2}',address_code='{3}' where id={4}"
-                            , registrationinformation._billno
+                    sql = string.Format("update Bus_RegistrationInfo set brandno='{0}',carcode='{1}',phone='{2}',address_code='{3}' where id={4}"
+                            , registrationinformation._brandno
                             , registrationinformation._carcode
                             , registrationinformation._phone
                             , registrationinformation._address
@@ -75,9 +75,10 @@ namespace delivery
 
                     using (PersistentManager persistentManager = new PersistentManager())
                     {
-                        sql = string.Format("insert into  Bus_RegistrationInfo values( '{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}','{9}')"
+                        sql = string.Format(@"insert into  Bus_RegistrationInfo (name,brandno,carcode,phone,daytime,state,memo,port,address_code,workstate)
+                        values( '{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}','{9}')"
                           , registrationinformation._name
-                          , registrationinformation._billno
+                          , registrationinformation._brandno
                           , registrationinformation._carcode
                           , registrationinformation._phone
                           , registrationinformation._daytime

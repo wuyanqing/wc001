@@ -21,12 +21,12 @@ namespace LEDSHOW
             get { return name; }
             set { name = value; }
         }
-        private string billno;//送货单号
+        private string brandno;//送货单号
 
-        public string _billno
+        public string _brandno
         {
-            get { return billno; }
-            set { billno = value; }
+            get { return brandno; }
+            set { brandno = value; }
         }
         private string carcode;//车牌号
 

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
-namespace delivery
+namespace LEDSHOW
 {
     public class RegistrationInfo
     {
@@ -13,7 +14,7 @@ namespace delivery
             get { return id; }
             set { id = value; }
         }
-        private string  name;//登记人姓名
+        private string name;//登记人姓名
 
         public string _name
         {

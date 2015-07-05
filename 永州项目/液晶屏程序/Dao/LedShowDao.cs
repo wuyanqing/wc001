@@ -9,18 +9,6 @@ namespace LEDSHOW.Dao
 {
     public class LedShowDao : BaseDao
     {
-        public DataTable LedShowInfo()
-        {
-            //string sql = "SELECT D.TobaccoName AS ProductName,D.StorageID AS StorageName,D.Piece AS Content,'出库' AS ACT " +
-            //    "FROM BillMaster AS M LEFT JOIN BillDetail AS D ON D.BillID=M.BillID";
-            string sql = "SELECT D.StorageID AS StorageName,D.TobaccoName AS ProductName,D.OperatePiece AS Content,S.StateName AS ACT " +
-                "FROM BillDetail AS D  " +
-                "LEFT JOIN StateType AS S ON S.StateCode = D.ConfirmState " +
-                "WHERE OperateCode='2' AND D.ConfirmState<>'3' " +
-                "ORDER BY D.ConfirmState DESC";
-            return this.ExecuteQuery(sql).Tables[0];
-        }
-
         /// <summary>
         /// 根据流水号查询分拣完成的数量等数据
         /// </summary>
@@ -70,31 +58,5 @@ namespace LEDSHOW.Dao
 			                WHERE STATUS=1 AND SORTNO=(SELECT MAX(SORTNO) FROM AS_SC_PALLETMASTER WHERE STATUS=1 ))";
             return Convert.ToInt32(ExecuteQuery(sql).Tables[0].Rows[0][0]);
         }
-
-        /// <summary>
-        /// 查询出当前正在分拣的线路的已分拣数量
-        /// </summary>
-        /// <returns></returns>
-        //        public int FindCurrentRouteCompleteQuantity()
-        //        {
-        //            string sql = @"SELECT ISNULL(SUM(QUANTITY)+SUM(QUANTITY1),0) AS ROUTECOMPLETEQUANTITY 
-        //		                            FROM AS_SC_PALLETMASTER 
-        //		                            WHERE ROUTECODE=(SELECT ROUTECODE  FROM AS_SC_PALLETMASTER 
-        //		                            WHERE STATUS=1 AND SORTNO=(SELECT MAX(SORTNO) FROM AS_SC_PALLETMASTER WHERE STATUS=1 ))
-        //                            AND ISNULL(CONVERT(CHAR, FINISHEDTIME),NULL) <>'NULL' AND ISNULL(CONVERT(CHAR, FINISHEDTIME1),NULL) <>'NULL'";
-        //            return Convert.ToInt32(ExecuteQuery(sql).Tables[0].Rows[0][0]);
-        //        }
-
-        /// <summary>
-        /// 查询订单日期和批次号
-        /// </summary>
-        /// <returns></returns>
-        public DataTable FindOrderdate()
-        {
-            string sql = @"SELECT DISTINCT(order_date) AS ORDERDATE,batch_no as BATCHNO FROM sort_order_allot_master";
-            return ExecuteQuery(sql).Tables[0];
-        }
-
-     
     }
 }

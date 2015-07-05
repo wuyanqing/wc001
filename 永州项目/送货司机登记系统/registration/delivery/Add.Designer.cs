@@ -39,6 +39,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.btncancel = new System.Windows.Forms.Button();
             this.cobaddress = new System.Windows.Forms.ComboBox();
+            this.lbid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbcarcode
@@ -84,9 +85,9 @@
             // txbcarcode
             // 
             this.txbcarcode.Font = new System.Drawing.Font("宋体", 12F);
-            this.txbcarcode.Location = new System.Drawing.Point(148, 22);
+            this.txbcarcode.Location = new System.Drawing.Point(149, 23);
             this.txbcarcode.Name = "txbcarcode";
-            this.txbcarcode.Size = new System.Drawing.Size(155, 26);
+            this.txbcarcode.Size = new System.Drawing.Size(195, 26);
             this.txbcarcode.TabIndex = 4;
             // 
             // txbphone
@@ -115,6 +116,7 @@
             this.btnadd.Text = "保存";
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            this.btnadd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnadd_KeyPress);
             // 
             // btncancel
             // 
@@ -134,14 +136,25 @@
             this.cobaddress.FormattingEnabled = true;
             this.cobaddress.Location = new System.Drawing.Point(149, 67);
             this.cobaddress.Name = "cobaddress";
-            this.cobaddress.Size = new System.Drawing.Size(156, 24);
+            this.cobaddress.Size = new System.Drawing.Size(196, 24);
             this.cobaddress.TabIndex = 10;
+            this.cobaddress.TextUpdate += new System.EventHandler(this.cobaddress_TextUpdate);
+            // 
+            // lbid
+            // 
+            this.lbid.AutoSize = true;
+            this.lbid.Font = new System.Drawing.Font("宋体", 16F);
+            this.lbid.Location = new System.Drawing.Point(3, 233);
+            this.lbid.Name = "lbid";
+            this.lbid.Size = new System.Drawing.Size(0, 22);
+            this.lbid.TabIndex = 11;
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 277);
+            this.Controls.Add(this.lbid);
             this.Controls.Add(this.cobaddress);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnadd);
@@ -155,6 +168,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add";
             this.Text = "送货登记";
+            this.Load += new System.EventHandler(this.Add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +186,7 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btncancel;
         private System.Windows.Forms.ComboBox cobaddress;
+        private System.Windows.Forms.Label lbid;
     }
 }
 

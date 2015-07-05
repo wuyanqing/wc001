@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gb_BaseShow = new System.Windows.Forms.GroupBox();
             this.Tb_Rank = new WSV.Control.TextBox.TextBox();
             this.lab_Rank = new System.Windows.Forms.Label();
@@ -170,14 +170,14 @@
             this.Dgv_baseInfo.AllowUserToAddRows = false;
             this.Dgv_baseInfo.AllowUserToDeleteRows = false;
             this.Dgv_baseInfo.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_baseInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_baseInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_baseInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_baseInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Col_Id,
@@ -248,7 +248,7 @@
             this.Btn_Exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Exit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Exit.Size = new System.Drawing.Size(61, 29);
             this.Btn_Exit.Text = "退出";
             this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
@@ -275,7 +275,7 @@
             this.Btn_Add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Add.Name = "Btn_Add";
-            this.Btn_Add.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Add.Size = new System.Drawing.Size(61, 29);
             this.Btn_Add.Text = "添加";
             this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
@@ -285,7 +285,7 @@
             this.Btn_Save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Save.Size = new System.Drawing.Size(61, 29);
             this.Btn_Save.Text = "修改";
             this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
@@ -295,7 +295,7 @@
             this.Btn_Del.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Del.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Del.Name = "Btn_Del";
-            this.Btn_Del.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Del.Size = new System.Drawing.Size(61, 29);
             this.Btn_Del.Text = "删除";
             this.Btn_Del.Click += new System.EventHandler(this.Btn_Del_Click);
             // 
@@ -305,7 +305,7 @@
             this.Btn_Fresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Fresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Fresh.Name = "Btn_Fresh";
-            this.Btn_Fresh.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Fresh.Size = new System.Drawing.Size(61, 29);
             this.Btn_Fresh.Text = "刷新";
             this.Btn_Fresh.Click += new System.EventHandler(this.Btn_Fresh_Click);
             // 
@@ -315,7 +315,7 @@
             this.Btn_Used.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_Used.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Used.Name = "Btn_Used";
-            this.Btn_Used.Size = new System.Drawing.Size(58, 29);
+            this.Btn_Used.Size = new System.Drawing.Size(61, 29);
             this.Btn_Used.Text = "作废";
             this.Btn_Used.Click += new System.EventHandler(this.Btn_Used_Click);
             // 
@@ -325,7 +325,7 @@
             this.Btn_NoUsed.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.Btn_NoUsed.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_NoUsed.Name = "Btn_NoUsed";
-            this.Btn_NoUsed.Size = new System.Drawing.Size(70, 29);
+            this.Btn_NoUsed.Size = new System.Drawing.Size(73, 29);
             this.Btn_NoUsed.Text = "反作废";
             this.Btn_NoUsed.Click += new System.EventHandler(this.Btn_NoUsed_Click);
             // 

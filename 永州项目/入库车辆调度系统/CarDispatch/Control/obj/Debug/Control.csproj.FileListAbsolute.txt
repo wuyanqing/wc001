@@ -1,0 +1,8 @@
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\Control.Properties.Resources.resources
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\GenerateResource.read.1.tlog
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\GenerateResource.write.1.tlog
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\bin\Debug\Control.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\bin\Debug\Control.pdb
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\Control.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Control\obj\Debug\Control.pdb

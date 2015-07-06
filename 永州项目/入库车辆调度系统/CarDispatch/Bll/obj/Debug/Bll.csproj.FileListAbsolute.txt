@@ -1,0 +1,9 @@
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Bll.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Bll.pdb
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\obj\Debug\Bll.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\obj\Debug\Bll.pdb
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Model.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Model.pdb
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Dal.dll
+D:\Git\sbgl\永州项目\入库车辆调度系统\CarDispatch\Bll\bin\Debug\Dal.pdb

@@ -8,8 +8,8 @@
     <ProjectGuid>{780B7A14-D2D8-48DF-A81C-5DCB1419A2E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <RootNamespace>CarDispatch</RootNamespace>
+    <AssemblyName>CarDispatch</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -34,8 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseClass\Error.cs" />
+    <Compile Include="BaseClass\ExportExcel.cs" />
+    <Compile Include="BaseClass\Function.cs" />
+    <Compile Include="BaseClass\MessageBoxFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClass\MessageBoxFrm.Designer.cs">
+      <DependentUpon>MessageBoxFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\PCTool.cs" />
+    <Compile Include="inform\inform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inform\inform.Designer.cs">
+      <DependentUpon>inform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +80,12 @@
     <Compile Include="SystemSet.Designer.cs">
       <DependentUpon>SystemSet.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaseClass\MessageBoxFrm.resx">
+      <DependentUpon>MessageBoxFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inform\inform.resx">
+      <DependentUpon>inform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SystemSet.resx">
       <DependentUpon>SystemSet.cs</DependentUpon>
@@ -84,6 +111,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll\Bll.csproj">
+      <Project>{47118A9F-A2A9-49D6-8FDA-DA0CC1AD9CAE}</Project>
+      <Name>Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{DEF7215D-E256-4AC0-9EEF-F278180C746F}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal\Dal.csproj">
+      <Project>{54D2C8BC-B4FD-40FC-81CB-BFE5226BAD42}</Project>
+      <Name>Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{66CF1192-A240-4FD8-8109-E8E757898C50}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,8 @@
+[systemconfig]
+username=admin
+pass=*+,-.:<D?C
+servername=192.168.0.104
+serverpassword='()*+,CCCCCC
+database=car_delivery
+
+

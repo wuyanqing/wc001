@@ -40,37 +40,47 @@
             this.ExitScreen = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lbbillnolist = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbno22 = new System.Windows.Forms.Label();
+            this.lbno2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbcurrentcard22 = new System.Windows.Forms.Label();
+            this.lbaddress22 = new System.Windows.Forms.Label();
+            this.lbcurrentcard2 = new System.Windows.Forms.Label();
+            this.lbaddress2 = new System.Windows.Forms.Label();
+            this.lbcarnum2 = new System.Windows.Forms.Label();
+            this.lbcompletetime2 = new System.Windows.Forms.Label();
+            this.lbcompletetime22 = new System.Windows.Forms.Label();
+            this.lbcarnum22 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.panelorder1 = new System.Windows.Forms.Panel();
+            this.lbno12 = new System.Windows.Forms.Label();
+            this.lbno1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbadress = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbadress11 = new System.Windows.Forms.Label();
+            this.lbcarcode11 = new System.Windows.Forms.Label();
+            this.lbaddress1 = new System.Windows.Forms.Label();
+            this.lbcarnum1 = new System.Windows.Forms.Label();
+            this.lbcompletetime1 = new System.Windows.Forms.Label();
+            this.lbcompletetime11 = new System.Windows.Forms.Label();
+            this.lbcarnum11 = new System.Windows.Forms.Label();
+            this.lbcurrentcard1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbworkstate = new System.Windows.Forms.Label();
             this.lblBatchValue2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTimeTxt = new System.Windows.Forms.Label();
-            this.lbcarcode = new System.Windows.Forms.Label();
-            this.lbadress2 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -79,9 +89,11 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panelorder1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -162,23 +174,36 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Snow;
+            this.panel8.Controls.Add(this.lbbillnolist);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(9, 417);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1004, 42);
             this.panel8.TabIndex = 40;
             // 
+            // lbbillnolist
+            // 
+            this.lbbillnolist.AutoSize = true;
+            this.lbbillnolist.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
+            this.lbbillnolist.ForeColor = System.Drawing.Color.Red;
+            this.lbbillnolist.Location = new System.Drawing.Point(181, 8);
+            this.lbbillnolist.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
+            this.lbbillnolist.Name = "lbbillnolist";
+            this.lbbillnolist.Size = new System.Drawing.Size(150, 25);
+            this.lbbillnolist.TabIndex = 48;
+            this.lbbillnolist.Text = "暂无排队任务";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.ForeColor = System.Drawing.Color.Green;
             this.label12.Location = new System.Drawing.Point(-1, 8);
             this.label12.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(525, 25);
+            this.label12.Size = new System.Drawing.Size(181, 25);
             this.label12.TabIndex = 47;
-            this.label12.Text = "送货单排队序列:1006     1007    1008    1009";
+            this.label12.Text = "送货单排队序列:";
             // 
             // panel5
             // 
@@ -194,44 +219,44 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.lbno2);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Location = new System.Drawing.Point(8, 214);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(490, 180);
             this.panel7.TabIndex = 42;
             // 
-            // label13
+            // lbno22
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.Green;
-            this.label13.Location = new System.Drawing.Point(4, 93);
-            this.label13.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(340, 25);
-            this.label13.TabIndex = 45;
-            this.label13.Text = "车牌号1005：等待时间约2小时";
+            this.lbno22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbno22.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
+            this.lbno22.ForeColor = System.Drawing.Color.Red;
+            this.lbno22.Location = new System.Drawing.Point(0, 0);
+            this.lbno22.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
+            this.lbno22.Name = "lbno22";
+            this.lbno22.Size = new System.Drawing.Size(486, 116);
+            this.lbno22.TabIndex = 45;
+            this.lbno22.Text = "车牌号1002：等待时间约30分钟";
             // 
-            // label17
+            // lbno2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(4, 56);
-            this.label17.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(355, 25);
-            this.label17.TabIndex = 44;
-            this.label17.Text = "车牌号1002：等待时间约30分钟";
+            this.lbno2.AutoSize = true;
+            this.lbno2.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
+            this.lbno2.ForeColor = System.Drawing.Color.Red;
+            this.lbno2.Location = new System.Drawing.Point(4, 31);
+            this.lbno2.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
+            this.lbno2.Name = "lbno2";
+            this.lbno2.Size = new System.Drawing.Size(355, 25);
+            this.lbno2.TabIndex = 44;
+            this.lbno2.Text = "车牌号1002：等待时间约30分钟";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(160, 12);
+            this.label18.Location = new System.Drawing.Point(163, 4);
             this.label18.Margin = new System.Windows.Forms.Padding(150, 15, 3, 5);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(137, 27);
@@ -244,10 +269,14 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.17073F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.82927F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbadress2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbcurrentcard22, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbaddress22, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbcurrentcard2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbaddress2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbcarnum2, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbcompletetime2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbcompletetime22, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbcarnum22, 0, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -255,44 +284,106 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.64835F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(490, 178);
             this.tableLayoutPanel2.TabIndex = 40;
             // 
-            // label1
+            // lbcurrentcard22
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(13, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 27);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "排队车辆总数";
+            this.lbcurrentcard22.AutoSize = true;
+            this.lbcurrentcard22.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcurrentcard22.ForeColor = System.Drawing.Color.Black;
+            this.lbcurrentcard22.Location = new System.Drawing.Point(13, 8);
+            this.lbcurrentcard22.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcurrentcard22.Name = "lbcurrentcard22";
+            this.lbcurrentcard22.Size = new System.Drawing.Size(187, 25);
+            this.lbcurrentcard22.TabIndex = 4;
+            this.lbcurrentcard22.Text = "当前入库车牌号";
             // 
-            // label6
+            // lbaddress22
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(13, 8);
-            this.label6.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "当前入库车牌号";
+            this.lbaddress22.AutoSize = true;
+            this.lbaddress22.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbaddress22.ForeColor = System.Drawing.Color.Black;
+            this.lbaddress22.Location = new System.Drawing.Point(13, 46);
+            this.lbaddress22.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbaddress22.Name = "lbaddress22";
+            this.lbaddress22.Size = new System.Drawing.Size(112, 27);
+            this.lbaddress22.TabIndex = 32;
+            this.lbaddress22.Text = "中烟信息";
             // 
-            // label8
+            // lbcurrentcard2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(13, 86);
-            this.label8.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 27);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "预计完成时间";
+            this.lbcurrentcard2.AutoSize = true;
+            this.lbcurrentcard2.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcurrentcard2.ForeColor = System.Drawing.Color.Black;
+            this.lbcurrentcard2.Location = new System.Drawing.Point(247, 8);
+            this.lbcurrentcard2.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcurrentcard2.Name = "lbcurrentcard2";
+            this.lbcurrentcard2.Size = new System.Drawing.Size(78, 25);
+            this.lbcurrentcard2.TabIndex = 37;
+            this.lbcurrentcard2.Text = "E110";
+            // 
+            // lbaddress2
+            // 
+            this.lbaddress2.AutoSize = true;
+            this.lbaddress2.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbaddress2.ForeColor = System.Drawing.Color.Black;
+            this.lbaddress2.Location = new System.Drawing.Point(247, 46);
+            this.lbaddress2.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbaddress2.Name = "lbaddress2";
+            this.lbaddress2.Size = new System.Drawing.Size(112, 27);
+            this.lbaddress2.TabIndex = 38;
+            this.lbaddress2.Text = "四川中烟";
+            // 
+            // lbcarnum2
+            // 
+            this.lbcarnum2.AutoSize = true;
+            this.lbcarnum2.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcarnum2.ForeColor = System.Drawing.Color.Black;
+            this.lbcarnum2.Location = new System.Drawing.Point(247, 86);
+            this.lbcarnum2.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcarnum2.Name = "lbcarnum2";
+            this.lbcarnum2.Size = new System.Drawing.Size(44, 27);
+            this.lbcarnum2.TabIndex = 39;
+            this.lbcarnum2.Text = "10";
+            // 
+            // lbcompletetime2
+            // 
+            this.lbcompletetime2.AutoSize = true;
+            this.lbcompletetime2.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcompletetime2.ForeColor = System.Drawing.Color.Black;
+            this.lbcompletetime2.Location = new System.Drawing.Point(247, 136);
+            this.lbcompletetime2.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcompletetime2.Name = "lbcompletetime2";
+            this.lbcompletetime2.Size = new System.Drawing.Size(78, 27);
+            this.lbcompletetime2.TabIndex = 40;
+            this.lbcompletetime2.Text = "1小时";
+            // 
+            // lbcompletetime22
+            // 
+            this.lbcompletetime22.AutoSize = true;
+            this.lbcompletetime22.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcompletetime22.ForeColor = System.Drawing.Color.Black;
+            this.lbcompletetime22.Location = new System.Drawing.Point(13, 136);
+            this.lbcompletetime22.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcompletetime22.Name = "lbcompletetime22";
+            this.lbcompletetime22.Size = new System.Drawing.Size(162, 27);
+            this.lbcompletetime22.TabIndex = 31;
+            this.lbcompletetime22.Text = "预计完成时间";
+            // 
+            // lbcarnum22
+            // 
+            this.lbcarnum22.AutoSize = true;
+            this.lbcarnum22.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcarnum22.ForeColor = System.Drawing.Color.Black;
+            this.lbcarnum22.Location = new System.Drawing.Point(13, 86);
+            this.lbcarnum22.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcarnum22.Name = "lbcarnum22";
+            this.lbcarnum22.Size = new System.Drawing.Size(162, 27);
+            this.lbcarnum22.TabIndex = 30;
+            this.lbcarnum22.Text = "排队车辆总数";
             // 
             // label9
             // 
@@ -319,57 +410,51 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.panelorder1);
+            this.panel6.Controls.Add(this.lbno1);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(3, 214);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(490, 180);
             this.panel6.TabIndex = 41;
             // 
-            // label16
+            // panelorder1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.Green;
-            this.label16.Location = new System.Drawing.Point(4, 127);
-            this.label16.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(340, 25);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "车牌号1004：等待时间约3小时";
+            this.panelorder1.Controls.Add(this.lbno12);
+            this.panelorder1.Location = new System.Drawing.Point(3, 64);
+            this.panelorder1.Name = "panelorder1";
+            this.panelorder1.Size = new System.Drawing.Size(484, 113);
+            this.panelorder1.TabIndex = 46;
             // 
-            // label14
+            // lbno12
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Green;
-            this.label14.Location = new System.Drawing.Point(4, 90);
-            this.label14.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(340, 25);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "车牌号1003：等待时间约2小时";
+            this.lbno12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbno12.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
+            this.lbno12.ForeColor = System.Drawing.Color.Red;
+            this.lbno12.Location = new System.Drawing.Point(0, 0);
+            this.lbno12.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
+            this.lbno12.Name = "lbno12";
+            this.lbno12.Size = new System.Drawing.Size(484, 113);
+            this.lbno12.TabIndex = 45;
+            this.lbno12.Text = "车牌号1001：等待时间约30分钟";
             // 
-            // label15
+            // lbno1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(4, 54);
-            this.label15.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(355, 25);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "车牌号1001：等待时间约30分钟";
+            this.lbno1.Font = new System.Drawing.Font("华文中宋", 16F, System.Drawing.FontStyle.Bold);
+            this.lbno1.ForeColor = System.Drawing.Color.Red;
+            this.lbno1.Location = new System.Drawing.Point(2, 31);
+            this.lbno1.Margin = new System.Windows.Forms.Padding(30, 15, 3, 5);
+            this.lbno1.Name = "lbno1";
+            this.lbno1.Size = new System.Drawing.Size(474, 25);
+            this.lbno1.TabIndex = 44;
+            this.lbno1.Text = "车牌号1001：等待时间约30分钟";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(160, 13);
+            this.label10.Location = new System.Drawing.Point(160, 4);
             this.label10.Margin = new System.Windows.Forms.Padding(150, 15, 3, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(137, 27);
@@ -382,10 +467,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.48665F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.51335F));
-            this.tableLayoutPanel1.Controls.Add(this.lbadress, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbcarcode, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbadress11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbcarcode11, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbaddress1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbcarnum1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbcompletetime1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbcompletetime11, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbcarnum11, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbcurrentcard1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -396,41 +485,101 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(490, 178);
             this.tableLayoutPanel1.TabIndex = 39;
             // 
-            // label3
+            // lbadress11
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(13, 136);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 27);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "排队车辆总数";
+            this.lbadress11.AutoSize = true;
+            this.lbadress11.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbadress11.ForeColor = System.Drawing.Color.Black;
+            this.lbadress11.Location = new System.Drawing.Point(13, 46);
+            this.lbadress11.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbadress11.Name = "lbadress11";
+            this.lbadress11.Size = new System.Drawing.Size(112, 27);
+            this.lbadress11.TabIndex = 4;
+            this.lbadress11.Text = "中烟信息";
             // 
-            // lbadress
+            // lbcarcode11
             // 
-            this.lbadress.AutoSize = true;
-            this.lbadress.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.lbadress.ForeColor = System.Drawing.Color.Black;
-            this.lbadress.Location = new System.Drawing.Point(13, 46);
-            this.lbadress.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.lbadress.Name = "lbadress";
-            this.lbadress.Size = new System.Drawing.Size(112, 27);
-            this.lbadress.TabIndex = 4;
-            this.lbadress.Text = "中烟信息";
+            this.lbcarcode11.AutoSize = true;
+            this.lbcarcode11.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcarcode11.ForeColor = System.Drawing.Color.Black;
+            this.lbcarcode11.Location = new System.Drawing.Point(13, 8);
+            this.lbcarcode11.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcarcode11.Name = "lbcarcode11";
+            this.lbcarcode11.Size = new System.Drawing.Size(187, 25);
+            this.lbcarcode11.TabIndex = 32;
+            this.lbcarcode11.Text = "当前入库车牌号";
             // 
-            // label4
+            // lbaddress1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(13, 86);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 27);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "预计完成时间";
+            this.lbaddress1.AutoSize = true;
+            this.lbaddress1.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbaddress1.ForeColor = System.Drawing.Color.Black;
+            this.lbaddress1.Location = new System.Drawing.Point(254, 46);
+            this.lbaddress1.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbaddress1.Name = "lbaddress1";
+            this.lbaddress1.Size = new System.Drawing.Size(112, 27);
+            this.lbaddress1.TabIndex = 33;
+            this.lbaddress1.Text = "湖南中烟";
+            // 
+            // lbcarnum1
+            // 
+            this.lbcarnum1.AutoSize = true;
+            this.lbcarnum1.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcarnum1.ForeColor = System.Drawing.Color.Black;
+            this.lbcarnum1.Location = new System.Drawing.Point(254, 86);
+            this.lbcarnum1.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcarnum1.Name = "lbcarnum1";
+            this.lbcarnum1.Size = new System.Drawing.Size(28, 27);
+            this.lbcarnum1.TabIndex = 34;
+            this.lbcarnum1.Text = "5";
+            // 
+            // lbcompletetime1
+            // 
+            this.lbcompletetime1.AutoSize = true;
+            this.lbcompletetime1.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcompletetime1.ForeColor = System.Drawing.Color.Black;
+            this.lbcompletetime1.Location = new System.Drawing.Point(254, 136);
+            this.lbcompletetime1.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcompletetime1.Name = "lbcompletetime1";
+            this.lbcompletetime1.Size = new System.Drawing.Size(94, 27);
+            this.lbcompletetime1.TabIndex = 35;
+            this.lbcompletetime1.Text = "30分钟";
+            // 
+            // lbcompletetime11
+            // 
+            this.lbcompletetime11.AutoSize = true;
+            this.lbcompletetime11.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcompletetime11.ForeColor = System.Drawing.Color.Black;
+            this.lbcompletetime11.Location = new System.Drawing.Point(13, 136);
+            this.lbcompletetime11.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcompletetime11.Name = "lbcompletetime11";
+            this.lbcompletetime11.Size = new System.Drawing.Size(162, 27);
+            this.lbcompletetime11.TabIndex = 31;
+            this.lbcompletetime11.Text = "预计完成时间";
+            // 
+            // lbcarnum11
+            // 
+            this.lbcarnum11.AutoSize = true;
+            this.lbcarnum11.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcarnum11.ForeColor = System.Drawing.Color.Black;
+            this.lbcarnum11.Location = new System.Drawing.Point(13, 86);
+            this.lbcarnum11.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcarnum11.Name = "lbcarnum11";
+            this.lbcarnum11.Size = new System.Drawing.Size(162, 27);
+            this.lbcarnum11.TabIndex = 30;
+            this.lbcarnum11.Text = "排队车辆总数";
+            // 
+            // lbcurrentcard1
+            // 
+            this.lbcurrentcard1.AutoSize = true;
+            this.lbcurrentcard1.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
+            this.lbcurrentcard1.ForeColor = System.Drawing.Color.Black;
+            this.lbcurrentcard1.Location = new System.Drawing.Point(254, 8);
+            this.lbcurrentcard1.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
+            this.lbcurrentcard1.Name = "lbcurrentcard1";
+            this.lbcurrentcard1.Size = new System.Drawing.Size(78, 25);
+            this.lbcurrentcard1.TabIndex = 36;
+            this.lbcurrentcard1.Text = "E110";
             // 
             // label11
             // 
@@ -446,22 +595,22 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Yellow;
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.lbworkstate);
             this.panel3.Location = new System.Drawing.Point(0, 463);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1024, 48);
             this.panel3.TabIndex = 36;
             // 
-            // label7
+            // lbworkstate
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.Color.Green;
-            this.label7.Location = new System.Drawing.Point(402, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 29);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "调度作业进行中";
+            this.lbworkstate.AutoSize = true;
+            this.lbworkstate.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbworkstate.ForeColor = System.Drawing.Color.Green;
+            this.lbworkstate.Location = new System.Drawing.Point(402, 11);
+            this.lbworkstate.Name = "lbworkstate";
+            this.lbworkstate.Size = new System.Drawing.Size(223, 29);
+            this.lbworkstate.TabIndex = 30;
+            this.lbworkstate.Text = "调度作业进行中";
             // 
             // lblBatchValue2
             // 
@@ -522,29 +671,13 @@
             this.lblTimeTxt.Size = new System.Drawing.Size(0, 24);
             this.lblTimeTxt.TabIndex = 8;
             // 
-            // lbcarcode
+            // panel9
             // 
-            this.lbcarcode.AutoSize = true;
-            this.lbcarcode.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.lbcarcode.ForeColor = System.Drawing.Color.Black;
-            this.lbcarcode.Location = new System.Drawing.Point(13, 8);
-            this.lbcarcode.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.lbcarcode.Name = "lbcarcode";
-            this.lbcarcode.Size = new System.Drawing.Size(187, 25);
-            this.lbcarcode.TabIndex = 32;
-            this.lbcarcode.Text = "当前入库车牌号";
-            // 
-            // lbadress2
-            // 
-            this.lbadress2.AutoSize = true;
-            this.lbadress2.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Bold);
-            this.lbadress2.ForeColor = System.Drawing.Color.Black;
-            this.lbadress2.Location = new System.Drawing.Point(13, 46);
-            this.lbadress2.Margin = new System.Windows.Forms.Padding(10, 5, 3, 5);
-            this.lbadress2.Name = "lbadress2";
-            this.lbadress2.Size = new System.Drawing.Size(112, 27);
-            this.lbadress2.TabIndex = 32;
-            this.lbadress2.Text = "中烟信息";
+            this.panel9.Controls.Add(this.lbno22);
+            this.panel9.Location = new System.Drawing.Point(3, 64);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(486, 116);
+            this.panel9.TabIndex = 46;
             // 
             // OrderList
             // 
@@ -578,12 +711,14 @@
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panelorder1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -602,35 +737,45 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblBatchValue2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbworkstate;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbadress;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbadress11;
+        private System.Windows.Forms.Label lbcarnum11;
+        private System.Windows.Forms.Label lbcompletetime11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbcarnum22;
+        private System.Windows.Forms.Label lbcurrentcard22;
+        private System.Windows.Forms.Label lbcompletetime22;
         private System.Windows.Forms.Label lblTimeTxt;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbno1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lbno2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lbcarcode;
-        private System.Windows.Forms.Label lbadress2;
+        private System.Windows.Forms.Label lbcarcode11;
+        private System.Windows.Forms.Label lbaddress22;
+        private System.Windows.Forms.Label lbbillnolist;
+        private System.Windows.Forms.Label lbno12;
+        private System.Windows.Forms.Label lbno22;
+        private System.Windows.Forms.Label lbaddress1;
+        private System.Windows.Forms.Label lbcarnum1;
+        private System.Windows.Forms.Label lbcompletetime1;
+        private System.Windows.Forms.Label lbcurrentcard1;
+        private System.Windows.Forms.Label lbcurrentcard2;
+        private System.Windows.Forms.Label lbaddress2;
+        private System.Windows.Forms.Label lbcarnum2;
+        private System.Windows.Forms.Label lbcompletetime2;
+        private System.Windows.Forms.Panel panelorder1;
+        private System.Windows.Forms.Panel panel9;
 
     }
 }

@@ -12,14 +12,16 @@ using DataRabbit.DBAccessing.ORM;
 using DataRabbit.HashOrm;
 using DataRabbit;
 using System.Threading;
-using LEDSHOW.Dao;
+using LEDSHOW.BLL;
 using THOK.Util;
+using LEDSHOW.Dao;
 
 namespace LEDSHOW
 {
     public partial class OrderList : Form
     {
         OrderFormConfig config = new OrderFormConfig(@".\OrderFormConfig.xml");
+        LedShowBLL bll = new LedShowBLL();
         bool IsSendToasynChronousScreen = false;
         int _Left = 0;
         int _LeftOffset = 0;
@@ -28,128 +30,215 @@ namespace LEDSHOW
         {
             InitializeComponent();
             lblTimeTxt.Text = DateTime.Now.ToString();
+            Run();
+        }
+        /// <summary>
+        /// 获取调度工作状态
+        /// </summary>
+        public bool getWorkState()
+        {
+            if (bll.getParameters("where parameter_name='state'").Rows[0]["parameter_value"].ToString()=="0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public string getrate(int port, int unCompletenum)
+        {
+            int rate = int.Parse(bll.getParameters("where parameter_name='Rate'").Rows[0]["parameter_value"].ToString());
+            string waitTimes = "";
+            if ((Math.Round((decimal)unCompletenum / rate, 2) * 60) >= 60)
+            {
+                waitTimes = (Math.Round((decimal)unCompletenum / rate, 2)).ToString() + "小时";
+            }
+            else
+            {
+                waitTimes = (Math.Round((decimal)unCompletenum / rate, 2) * 60).ToString() + "分钟";
+            }
+            return waitTimes;
+        }
+        /// <summary>
+        /// 该车辆前边未卸货总任务数量
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int workTaskQty(int port, string id)
+        {
+            return bll.workTaskQty("where workstate='1' and port='" + port + "' and id<'" + id + "'");
+        }
+        /// <summary>
+        /// 正在入库车辆未完成数量
+        /// </summary>
+        /// <param name="port"></param>
+        /// <returns></returns>
+        public int untotal(int port)
+        {
+            DataTable currentDt = bll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
+            if (currentDt.Rows.Count > 0)
+            {
+                string billno = currentDt.Rows[0]["billno"].ToString();
+                return 200;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        /// <summary>
+        /// 工作状态展示
+        /// </summary>
+        public void workStateShow()
+        {
+            if (getWorkState())
+            {
+                lbworkstate.Text = "调度作业进行中！";
+                lbworkstate.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbworkstate.Text = "调度作业已停止！";
+                lbworkstate.ForeColor = Color.Red;
+            }
+        }
+        /// <summary>
+        /// 送货单排队信息展示
+        /// </summary>
+        public void registrationInfosShouw()
+        {
+            lbbillnolist.Text = "";
+            DataTable dtAllUnSubmit = bll.getRegistrationInfos("where workstate='0' order by id");
+            int unSubmit = dtAllUnSubmit.Rows.Count;
+            if (unSubmit > 0)
+            {
+                for (int i = 0; i < unSubmit; i++)
+                {
+                    lbbillnolist.Text += dtAllUnSubmit.Rows[i]["carcode"].ToString() + "     ";
+                    lbbillnolist.ForeColor = Color.Red;
+                }
+            }
+            else
+            {
+                lbbillnolist.Text = "所有送货单均已提交，暂无任务！";
+                lbbillnolist.ForeColor = Color.Green;
+            }      
+        }
+        /// <summary>
+        /// 链板机入库等待车辆信息展示
+        /// </summary>
+        public void storageTaskShow(int port)
+        {
+            DataTable dtAllSubmit = bll.getRegistrationInfos("where workstate='1' and port='" + port + "' order by billno");
+            int allSubmit = dtAllSubmit.Rows.Count;
+            int unCompletenQty = untotal(port);
+            if (port == 1)
+            {
+                lbno1.Text = "";
+                lbno12.Text = "";
+                if (allSubmit > 0)
+                {
+                    for (int i = 0; i < allSubmit; i++)
+                    {
+                        if (i == 0)
+                        {
+                            lbno1.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty);
+                            lbno1.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+
+                            lbno12.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty) + Environment.NewLine;
+                            lbno12.ForeColor = Color.Green;
+                        }
+                    }
+                }
+                else
+                {
+                    lbno1.Text = "没有等待车辆，暂无任务！";
+                    lbno1.ForeColor = Color.Green;
+                }  
+            }
+            else
+            {
+                lbno2.Text = "";
+                lbno22.Text = "";
+                if (allSubmit > 0)
+                {
+                    for (int i = 0; i < allSubmit; i++)
+                    {
+                        if (i == 0)
+                        {
+                            lbno2.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty);
+                            lbno2.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+
+                            lbno22.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty) + Environment.NewLine;
+                            lbno22.ForeColor = Color.Green;
+                        }
+                    }
+                }
+                else
+                {
+                    lbno2.Text = "没有等待车辆，暂无任务！";
+                    lbno2.ForeColor = Color.Green;
+                }
+            }
+        }
+         /// <summary>
+        /// 当前正在入库车辆信息展示
+        /// </summary>
+        public void CurrentStorageTaskShow(int port)
+        {
+            DataTable dtWorkCars = bll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
+            DataTable dtAllSubmit = bll.getRegistrationInfos("where workstate='1' and port='" + port + "'");
+            int rate = int.Parse(bll.getParameters("where parameter_name='Rate'").Rows[0]["parameter_value"].ToString());
+            int unCompletenQty = untotal(port);
+            if (port == 1)
+            {
+                lbcarnum1.Text = dtAllSubmit.Rows.Count.ToString();
+                lbcompletetime1.Text = getrate(port, unCompletenQty);
+                if (dtWorkCars.Rows.Count > 0)
+                {
+                    lbcurrentcard1.Text = dtWorkCars.Rows[0]["carcode"].ToString();
+                    lbaddress1.Text = dtWorkCars.Rows[0]["address_name"].ToString();
+                }
+                else
+                {
+                    lbcurrentcard1.Text = "无";
+                    lbaddress1.Text = "无";
+                }
+            }
+            else
+            {
+                lbcarnum2.Text = dtAllSubmit.Rows.Count.ToString();
+                lbcompletetime2.Text = getrate(port, unCompletenQty);
+                if (dtWorkCars.Rows.Count > 0)
+                {
+                    lbcurrentcard2.Text = dtWorkCars.Rows[0]["carcode"].ToString();
+                    lbaddress2.Text = dtWorkCars.Rows[0]["address_name"].ToString();
+                }
+                else
+                {
+                    lbcurrentcard2.Text = "无";
+                    lbaddress2.Text = "无";
+                }
+            }
         }
         private void Run()
         {
-            try
-            {
-                lblTimeTxt.Text = DateTime.Now.ToString();
-                using (PersistentManager pm = new PersistentManager("DefaultConnection"))
-                {
+            workStateShow();
+            registrationInfosShouw();
+            storageTaskShow(1);//1号链板机
+            storageTaskShow(2);//2号链板机
+            CurrentStorageTaskShow(1);
+            CurrentStorageTaskShow(2);
+            lblTimeTxt.Text = DateTime.Now.ToString();
 
-                    TimeDao timeshow = new TimeDao();
-                    timeshow.SetPersistentManager(pm);
-                    //一号
-                    string sortNo = Convert.ToString("one");
-
-
-                    DataTable infoTable = timeshow.FindSortTime(sortNo);
-                    RefreshAgv refreshAgv = new RefreshAgv();
-                    int nu = 0;
-                    RefreshData2 re = new RefreshData2();
-                    if (infoTable.Rows.Count > 1)
-                    {
-                        nu = Convert.ToInt32(infoTable.Rows[0]["Times"]);
-
-                        double a = nu * 0.0 / 3600;
-                        re.CompleteQuantity2 = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]) / Convert.ToInt32(a);
-                    }
-                    else
-                    {
-                        re.CompleteQuantity2 = 0;
-                    }
-
-                }
-
-                using (PersistentManager pm = new PersistentManager("DefaultConnection2"))
-                {
-                    LedShowDao ledShowDao = new LedShowDao();
-                    ledShowDao.SetPersistentManager(pm);
-                    string sortNo = Convert.ToString("all");
-
-                    DataTable infoTable = ledShowDao.FindOrderInfo(sortNo);
-                    RefreshData refreshData = new RefreshData();
-                    refreshData.TotalCustomer = Convert.ToInt32(infoTable.Rows[0]["CUSTOMERNUM"]);
-                    refreshData.TotalRoute = Convert.ToInt32(infoTable.Rows[0]["ROUTENUM"]);
-                    refreshData.TotalQuantity = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]);
-
-                    //已分拣
-                    infoTable = ledShowDao.FindOrderInfo("");
-                    refreshData.CompleteCustomer = Convert.ToInt32(infoTable.Rows[0]["CUSTOMERNUM"]);
-                    refreshData.CompleteRoute = Convert.ToInt32(infoTable.Rows[0]["ROUTENUM"]);
-                    refreshData.CompleteQuantity = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]);
-
-                    if (refreshData.CompleteQuantity >= 1)
-                    {
-                        refreshData.Average = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]) / ledShowDao.FindSortingAverage();
-                    }
-                    else
-                    {
-                        refreshData.Average = 0;
-                    }
-                    if (ledShowDao.FindCurrentRoute().Rows.Count != 0)
-                    {
-                        refreshData.RouteName = ledShowDao.FindCurrentRoute().Rows[0]["ROUTENAME"].ToString();
-                    }
-                    else
-                    {
-                        refreshData.RouteName = "";
-                    }
-
-                    refreshData.Batch = Convert.ToDateTime(ledShowDao.FindOrderdate().Rows[0]["ORDERDATE"]).ToString("yyyy-MM-dd") + "批次：" + ledShowDao.FindOrderdate().Rows[0]["BATCHNO"].ToString();
-                    Refresh(refreshData);
-                }
-                using (PersistentManager pm = new PersistentManager("DefaultConnection3"))
-                {
-
-                    LedShowDao ledShowDao = new LedShowDao();
-                    ledShowDao.SetPersistentManager(pm);
-                    string sortNo = Convert.ToString("all"); ;
-
-                    DataTable infoTable = ledShowDao.FindOrderInfo(sortNo);
-                    RefreshData2 refreshData2 = new RefreshData2();
-                    refreshData2.TotalCustomer2 = Convert.ToInt32(infoTable.Rows[0]["CUSTOMERNUM"]);
-                    refreshData2.TotalRoute2 = Convert.ToInt32(infoTable.Rows[0]["ROUTENUM"]);
-                    refreshData2.TotalQuantity2 = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]);
-
-                    infoTable = ledShowDao.FindOrderInfo("");
-                    refreshData2.CompleteCustomer2 = Convert.ToInt32(infoTable.Rows[0]["CUSTOMERNUM"]);
-                    refreshData2.CompleteRoute2 = Convert.ToInt32(infoTable.Rows[0]["ROUTENUM"]);
-                    refreshData2.CompleteQuantity2 = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]);
-                    if (refreshData2.CompleteQuantity2 >= 1)
-                    {
-                        refreshData2.Average2 = Convert.ToInt32(infoTable.Rows[0]["QUANTITY"]) / ledShowDao.FindSortingAverage();
-                    }
-                    else
-                    {
-                        refreshData2.Average2 = 0;
-                    }
-                    if (ledShowDao.FindCurrentRoute().Rows.Count != 0)
-                    {
-                        refreshData2.RouteName2 = ledShowDao.FindCurrentRoute().Rows[0]["ROUTENAME"].ToString();
-                    }
-                    else
-                    {
-                        refreshData2.RouteName2 = "";
-                    }
-                    refreshData2.Batch2 = Convert.ToDateTime(ledShowDao.FindOrderdate().Rows[0]["ORDERDATE"]).ToString("yyyy-MM-dd") + "批次：" + ledShowDao.FindOrderdate().Rows[0]["BATCHNO"].ToString();
-                    Refresh2(refreshData2);
-                 
-                }
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("无法连接数据库");
-              
-            }
-        }
-        private void Refresh(RefreshData refreshData)
-        {
-        }
-        private void Refresh2(RefreshData2 refreshData)
-        {
-           
         }
         private Bitmap PrintForm()
         {
@@ -282,6 +371,7 @@ namespace LEDSHOW
         {
             try
             {
+                System.Threading.Thread.Sleep(10000);
                 this.Run();
             }
             catch (Exception ex)

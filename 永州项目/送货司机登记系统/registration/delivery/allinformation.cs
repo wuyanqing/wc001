@@ -48,11 +48,9 @@ namespace delivery
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-             /*判断点击行标题与列标题*/
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                /*传员工工号过去*/
-                int  id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                int id = int.Parse(this.dataGridView1.CurrentRow.Cells["Column1"].Value.ToString());
                 Add add = new Add(id,this);
                 add.Show();
             }

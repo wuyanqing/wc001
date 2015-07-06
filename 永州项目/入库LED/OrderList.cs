@@ -12,7 +12,7 @@ using DataRabbit.DBAccessing.ORM;
 using DataRabbit.HashOrm;
 using DataRabbit;
 using System.Threading;
-
+using LEDSHOW.BLL;
 using LEDSHOW.Dao;
 using THOK.Util;
 
@@ -24,6 +24,7 @@ namespace LEDSHOW
         bool IsSendToasynChronousScreen = false;
         int _Left = 0;
         int _LeftOffset = 0;
+        LedShowBLL ledShowBll = new LedShowBLL();
 
         public OrderList()
         {
@@ -34,71 +35,108 @@ namespace LEDSHOW
             try
             {
                 lblTimeTxt.Text = DateTime.Now.ToString("yyyy年MM月dd日hh时mm分");
-
-                using (PersistentManager pm = new PersistentManager())
-                {
-
-                    LedShowDao ledShowDao = new LedShowDao();
-                    //总数量  
-                    string sortNo = Convert.ToString("all"); ;
-                    DataTable infoTable = ledShowDao.FindOrderInfo(sortNo);
-                    RefreshData refreshData = new RefreshData();
-                    if (!String.IsNullOrEmpty(infoTable.Rows[0][0].ToString()))
-                    {
-                        refreshData.Total = Convert.ToInt32(infoTable.Rows[0]["total"]);
-                        //已入库
-                        infoTable = ledShowDao.FindOrderInfo("");
-                        if (!String.IsNullOrEmpty(infoTable.Rows[0][0].ToString()))
-                        {
-                            refreshData.Untotal = Convert.ToInt32(infoTable.Rows[0]["total"]);
-                        }
-                        else
-                        {
-                            refreshData.Untotal = 0;
-                        }
-                        //查询车载入库信息
-                        infoTable = ledShowDao.FindProductMiss("");
-                        if (infoTable.Rows.Count == 0)
-                        {
-                            string tem = "当前无入库任务。";
-                            refreshData.Product_name += tem;
-                        }
-                        else
-                        {
-                            int i = 0;
-                            foreach (DataRow dr in infoTable.Rows)
-                            {
-                                i += 1;
-                                if (i < 10)
-                                {
-                                    string tem = string.Format("{0},  {1},  {2} 正在入库\r\n", dr["cell_name"], dr["task_quantity"], dr["product_name"]);
-                                    refreshData.Product_name += tem;
-                                }
-                            }
-                        }
-                        Refresh(refreshData);
-                    }
-                    else
-                    {
-                        //string tem = "当前无入库任务。";
-                        string tem = "正在入库：";
-                        refreshData.Product_name += tem;
-                    }
-                }
+                Refresh(1, untotal(1));
+                Refresh(2, untotal(2));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
-        private void Refresh(RefreshData refreshData)
+        /// <summary>
+        /// 正在入库车辆未完成数量
+        /// </summary>
+        /// <param name="port"></param>
+        /// <returns></returns>
+        public int untotal(int port)
         {
-            lblCurrentRoute2.Text = refreshData.Total.ToString(); //入库总数
-            lblCurrentRoute.Text = refreshData.Untotal.ToString();//已入库数量   
-            PbarBatch.Value = (int)(Convert.ToDouble(refreshData.Untotal) / refreshData.Total * 100);
-            lblBatchValue.Text = PbarBatch.Value.ToString() + "%";
-            label4.Text = refreshData.Product_name;
+            DataTable currentDt = ledShowBll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
+            if (currentDt.Rows.Count > 0)
+            {
+                string billno = currentDt.Rows[0]["billno"].ToString();
+                return 200;
+            }
+            else
+            {
+                return 0;
+            }
         }
+        /// <summary>
+        /// 界面数据刷新
+        /// </summary>
+        /// <param name="refreshData"></param>
+        private void Refresh(int port, int untotal)
+        {
+            RefreshData refreshData = getdatas(port, untotal);
+            lbAllWaitCars.Text = refreshData.AllWaitCas.ToString();
+            if (port == 1)
+            {
+                lblAllCurrentQty1.Text = refreshData.Total.ToString();//入库总数
+                lblCurrentQty1.Text = refreshData.Untotal.ToString();//未入库数量   
+                lbwaitcars1.Text = refreshData.UnWorktotalCars.ToString();//等待入库车辆数
+                lbcurrentstoragecar1.Text = refreshData.CurrentCarcode;//正在入库车牌号
+                lbwaitstoragecar1.Text = refreshData.WaitCarcode;//准备入库车牌号
+                if (refreshData.Total == 0)
+                {
+                    progressBar1.Value = 0;
+                }
+                else
+                {
+                    progressBar1.Value = (int)(Convert.ToDouble(refreshData.Untotal) / refreshData.Total * 100);
+                }
+                lblBatchValue1.Text = progressBar1.Value.ToString() + "%";
+            }
+            else
+            {
+                lblAllCurrentQty2.Text = refreshData.Total.ToString();//入库总数
+                lblCurrentQty2.Text = refreshData.Untotal.ToString();//未入库数量   
+                lbwaitcars2.Text = refreshData.UnWorktotalCars.ToString();//等待入库车辆数
+                lbcurrentstoragecar2.Text = refreshData.CurrentCarcode;//正在入库车牌号
+                lbwaitstoragecar2.Text = refreshData.WaitCarcode;//准备入库车牌号
+                if (refreshData.Total == 0)
+                {
+                    progressBar2.Value = 0;
+                }
+                else
+                {
+                    progressBar2.Value = (int)(Convert.ToDouble(refreshData.Untotal) / refreshData.Total * 100);
+                }
+                lblBatchValue2.Text = progressBar2.Value.ToString() + "%";
+            }
+        }
+        /// <summary>
+        /// 界面数据提取
+        /// </summary>
+        public RefreshData getdatas(int port, int untotal)
+        {
+            RefreshData refreshData = new RefreshData();
+            DataTable currentDt = ledShowBll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
+            DataTable waitCars = ledShowBll.getRegistrationInfos("where workstate='1' and port='" + port + "'");
+            refreshData.AllWaitCas = ledShowBll.getRegistrationInfos("where workstate<'2'").Rows.Count;
+            if (currentDt.Rows.Count > 0)
+            {
+                refreshData.Total = int.Parse(currentDt.Rows[0]["quantity"].ToString());
+                refreshData.Untotal = untotal;
+                refreshData.CurrentCarcode = currentDt.Rows[0]["carcode"].ToString();
+            }
+            else
+            {
+                refreshData.Total = 0;
+                refreshData.Untotal = 0;
+                refreshData.CurrentCarcode = "无";
+            }
+            if (waitCars.Rows.Count > 0)
+            {
+                refreshData.WaitCarcode = waitCars.Rows[0]["carcode"].ToString();
+            }
+            else
+            {
+                refreshData.WaitCarcode = "暂无任务！";
+            }
+            refreshData.UnWorktotalCars = waitCars.Rows.Count;
+            return refreshData;
+        }
+             
 
         private Bitmap PrintForm()
         {

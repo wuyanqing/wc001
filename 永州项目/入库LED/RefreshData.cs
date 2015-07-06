@@ -28,7 +28,13 @@ namespace LEDSHOW
             get { return unWorktotalCars; }
             set { unWorktotalCars = value; }
         }
+        private int allWaitCas;//当前入库总数
 
+        public int AllWaitCas
+        {
+            get { return allWaitCas; }
+            set { allWaitCas = value; }
+        }
 
         private string currentCarcode;//正在入库车辆车牌号
 

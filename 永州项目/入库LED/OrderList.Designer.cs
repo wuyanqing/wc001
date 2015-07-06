@@ -72,6 +72,8 @@
             this.ForeShow = new System.Windows.Forms.ToolStripMenuItem();
             this.BackShow = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitScreen = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbAllWaitCars = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -126,6 +128,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.lbAllWaitCars);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.groupBox1);
@@ -227,7 +231,7 @@
             // lblBatchValue2
             // 
             this.lblBatchValue2.AutoSize = true;
-            this.lblBatchValue2.Location = new System.Drawing.Point(213, 130);
+            this.lblBatchValue2.Location = new System.Drawing.Point(205, 130);
             this.lblBatchValue2.Name = "lblBatchValue2";
             this.lblBatchValue2.Size = new System.Drawing.Size(28, 17);
             this.lblBatchValue2.TabIndex = 16;
@@ -390,7 +394,7 @@
             // lblBatchValue1
             // 
             this.lblBatchValue1.AutoSize = true;
-            this.lblBatchValue1.Location = new System.Drawing.Point(213, 130);
+            this.lblBatchValue1.Location = new System.Drawing.Point(204, 130);
             this.lblBatchValue1.Name = "lblBatchValue1";
             this.lblBatchValue1.Size = new System.Drawing.Size(28, 17);
             this.lblBatchValue1.TabIndex = 16;
@@ -513,6 +517,28 @@
             this.ExitScreen.Text = "退出LED显示屏";
             this.ExitScreen.Click += new System.EventHandler(this.ExitScreen_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(337, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "待卸车辆总数：";
+            // 
+            // lbAllWaitCars
+            // 
+            this.lbAllWaitCars.AutoSize = true;
+            this.lbAllWaitCars.Font = new System.Drawing.Font("宋体", 12F);
+            this.lbAllWaitCars.ForeColor = System.Drawing.Color.Red;
+            this.lbAllWaitCars.Location = new System.Drawing.Point(458, 6);
+            this.lbAllWaitCars.Name = "lbAllWaitCars";
+            this.lbAllWaitCars.Size = new System.Drawing.Size(32, 16);
+            this.lbAllWaitCars.TabIndex = 36;
+            this.lbAllWaitCars.Text = "2辆";
+            // 
             // OrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -587,6 +613,8 @@
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbAllWaitCars;
+        private System.Windows.Forms.Label label3;
 
     }
 }

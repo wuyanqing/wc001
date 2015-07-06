@@ -68,6 +68,7 @@ namespace LEDSHOW
         private void Refresh(int port, int untotal)
         {
             RefreshData refreshData = getdatas(port, untotal);
+            lbAllWaitCars.Text = refreshData.AllWaitCas.ToString();
             if (port == 1)
             {
                 lblAllCurrentQty1.Text = refreshData.Total.ToString();//入库总数
@@ -100,7 +101,7 @@ namespace LEDSHOW
                 {
                     progressBar2.Value = (int)(Convert.ToDouble(refreshData.Untotal) / refreshData.Total * 100);
                 }
-                lblBatchValue2.Text = progressBar1.Value.ToString() + "%";
+                lblBatchValue2.Text = progressBar2.Value.ToString() + "%";
             }
         }
         /// <summary>
@@ -111,6 +112,7 @@ namespace LEDSHOW
             RefreshData refreshData = new RefreshData();
             DataTable currentDt = ledShowBll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
             DataTable waitCars = ledShowBll.getRegistrationInfos("where workstate='1' and port='" + port + "'");
+            refreshData.AllWaitCas = ledShowBll.getRegistrationInfos("where workstate<'2'").Rows.Count;
             if (currentDt.Rows.Count > 0)
             {
                 refreshData.Total = int.Parse(currentDt.Rows[0]["quantity"].ToString());

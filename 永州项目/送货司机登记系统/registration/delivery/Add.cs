@@ -36,13 +36,14 @@ namespace delivery
         }
         public void updateRegistrationInfo(int id)
         {
-            if (da.registrationInfo("where id='" + id + "'").Rows.Count > 0)
+            DataTable dtRegistrationInfo = da.registrationInfo("where id='" + id + "'");
+            if (dtRegistrationInfo.Rows.Count > 0)
             {
                 lbid.Text = id.ToString();
-                txbcarcode.Text = da.registrationInfo("where id='" + id + "'").Rows[0]["carcode"].ToString();
-                txbbillno.Text = da.registrationInfo("where id='" + id + "'").Rows[0]["brandno"].ToString();
-                txbphone.Text = da.registrationInfo("where id='" + id + "'").Rows[0]["phone"].ToString();
-                cobaddress.Text = da.registrationInfo("where id='" + id + "'").Rows[0]["address_name"].ToString();
+                txbcarcode.Text = dtRegistrationInfo.Rows[0]["carcode"].ToString();
+                txbbillno.Text = dtRegistrationInfo.Rows[0]["brandno"].ToString();
+                txbphone.Text = dtRegistrationInfo.Rows[0]["phone"].ToString();
+                cobaddress.Text = dtRegistrationInfo.Rows[0]["address_name"].ToString();
             }
         }
         private void btncancel_Click(object sender, EventArgs e)

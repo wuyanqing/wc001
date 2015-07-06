@@ -71,6 +71,24 @@ namespace LEDSHOW
             return bll.workTaskQty("where workstate='1' and port='" + port + "' and id<'" + id + "'");
         }
         /// <summary>
+        /// 正在入库车辆未完成数量
+        /// </summary>
+        /// <param name="port"></param>
+        /// <returns></returns>
+        public int untotal(int port)
+        {
+            DataTable currentDt = bll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
+            if (currentDt.Rows.Count > 0)
+            {
+                string billno = currentDt.Rows[0]["billno"].ToString();
+                return 200;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        /// <summary>
         /// 工作状态展示
         /// </summary>
         public void workStateShow()
@@ -92,7 +110,7 @@ namespace LEDSHOW
         public void registrationInfosShouw()
         {
             lbbillnolist.Text = "";
-            DataTable dtAllUnSubmit = bll.getRegistrationInfos("where workstate='0'");
+            DataTable dtAllUnSubmit = bll.getRegistrationInfos("where workstate='0' order by id");
             int unSubmit = dtAllUnSubmit.Rows.Count;
             if (unSubmit > 0)
             {
@@ -113,10 +131,9 @@ namespace LEDSHOW
         /// </summary>
         public void storageTaskShow(int port)
         {
-            DataTable dtAllSubmit = bll.getRegistrationInfos("where workstate='1' and port='" + port + "'");
+            DataTable dtAllSubmit = bll.getRegistrationInfos("where workstate='1' and port='" + port + "' order by billno");
             int allSubmit = dtAllSubmit.Rows.Count;
-            int unCompletenum1 =200;//1号链板机正在卸货车辆未完成数量
-            int unCompletenum2 = 2000;//2号链板机正在卸货车辆未完成数量
+            int unCompletenQty = untotal(port);
             if (port == 1)
             {
                 lbno1.Text = "";
@@ -127,13 +144,13 @@ namespace LEDSHOW
                     {
                         if (i == 0)
                         {
-                            lbno1.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port,workTaskQty(port,dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenum1);
+                            lbno1.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty);
                             lbno1.ForeColor = Color.Red;
                         }
                         else
                         {
 
-                            lbno12.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenum1) + Environment.NewLine;
+                            lbno12.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty) + Environment.NewLine;
                             lbno12.ForeColor = Color.Green;
                         }
                     }
@@ -154,13 +171,13 @@ namespace LEDSHOW
                     {
                         if (i == 0)
                         {
-                            lbno2.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenum2);
+                            lbno2.Text = dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty);
                             lbno2.ForeColor = Color.Red;
                         }
                         else
                         {
 
-                            lbno22.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenum2) + Environment.NewLine;
+                            lbno22.Text += dtAllSubmit.Rows[i]["carcode"].ToString() + ": 等待时间约 " + getrate(port, workTaskQty(port, dtAllSubmit.Rows[i]["id"].ToString()) + unCompletenQty) + Environment.NewLine;
                             lbno22.ForeColor = Color.Green;
                         }
                     }
@@ -180,12 +197,11 @@ namespace LEDSHOW
             DataTable dtWorkCars = bll.getRegistrationInfos("where workstate='2' and port='" + port + "'");
             DataTable dtAllSubmit = bll.getRegistrationInfos("where workstate='1' and port='" + port + "'");
             int rate = int.Parse(bll.getParameters("where parameter_name='Rate'").Rows[0]["parameter_value"].ToString());
-            int unCompletenum1 = 200;
-            int unCompletenum2 = 2000;
+            int unCompletenQty = untotal(port);
             if (port == 1)
             {
                 lbcarnum1.Text = dtAllSubmit.Rows.Count.ToString();
-                lbcompletetime1.Text = getrate(port, unCompletenum1);
+                lbcompletetime1.Text = getrate(port, unCompletenQty);
                 if (dtWorkCars.Rows.Count > 0)
                 {
                     lbcurrentcard1.Text = dtWorkCars.Rows[0]["carcode"].ToString();
@@ -200,7 +216,7 @@ namespace LEDSHOW
             else
             {
                 lbcarnum2.Text = dtAllSubmit.Rows.Count.ToString();
-                lbcompletetime2.Text = getrate(port, unCompletenum2);
+                lbcompletetime2.Text = getrate(port, unCompletenQty);
                 if (dtWorkCars.Rows.Count > 0)
                 {
                     lbcurrentcard2.Text = dtWorkCars.Rows[0]["carcode"].ToString();

@@ -7,48 +7,45 @@ namespace LEDSHOW
 {
     public class RefreshData
     {
-        private int total;//总数
+        private int total;//当前入库总数
 
         public int Total
         {
             get { return total; }
             set { total = value; }
         }
-        private int untotal;//未补货
+        private int untotal;//当前入库车辆未入库任务数量
 
         public int Untotal
         {
             get { return untotal; }
             set { untotal = value; }
         }
-        private string product_name;//卷烟名称
+        private int unWorktotalCars;//等待卸货车辆总数
 
-        public string Product_name
+        public int UnWorktotalCars
         {
-            get { return product_name; }
-            set { product_name = value; }
+            get { return unWorktotalCars; }
+            set { unWorktotalCars = value; }
         }
 
 
-        private string quantity;//数量
+        private string currentCarcode;//正在入库车辆车牌号
 
-        public string Quantity
+        public string CurrentCarcode
         {
-            get { return quantity; }
-            set { quantity = value; }
-        }
-       
-     
-      
-        private string cell_name;//货位名称
-
-        public string Cell_name
-        {
-            get { return cell_name; }
-            set { cell_name = value; }
+            get { return currentCarcode; }
+            set { currentCarcode = value; }
         }
 
-       
-     
+
+
+        private string waitCarcode;//准备入库车牌号
+
+        public string WaitCarcode
+        {
+            get { return waitCarcode; }
+            set { waitCarcode = value; }
+        }
     }
 }

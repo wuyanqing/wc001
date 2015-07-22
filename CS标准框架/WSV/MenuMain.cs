@@ -31,7 +31,7 @@ namespace WSV
         #region 界面方法
         private void MenuMain_Load(object sender, EventArgs e)
         {
-            Pander_Plan.Visible = false;
+            //Pander_Plan.Visible = false;
             if (!Directory.Exists(Directory.GetCurrentDirectory() + "\\data"))
             {
                 Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\data");
@@ -109,36 +109,26 @@ namespace WSV
         #endregion
 
         #region 左面工具栏私有方法
-        //车辆过磅
+        //基础数据
         private void Pander_Weight_Click(object sender, EventArgs e)
         {
-            //foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
-            //{
-            //    if (XP.Name == "Mid_Weight")
-            //    {
-            //        XP.Visible = true;
-            //        Mid_PanelList.Expand(XP);
-            //    }
-            //    else
-            //        XP.Visible = false;
-            //}
+            foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
+            {
+                if (XP.Name == "Mid_Base")
+                {
+                    XP.Visible = true;
+                    Mid_PanelList.Expand(XP);
+                }
+                else
+                    XP.Visible = false;
+            }
         }
         //查询
         private void Pander_Search_Click(object sender, EventArgs e)
         {
-            //foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
-            //{
-            //    if (XP.Name == "Mid_Search")
-            //    {
-            //        XP.Visible = true;
-            //        Mid_PanelList.Expand(XP);
-            //    }
-            //    else
-            //        XP.Visible = false;
-            //}
             foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
             {
-                if (XP.Name == "Mid_BaseInfo")
+                if (XP.Name == "Mid_Search")
                 {
                     XP.Visible = true;
                     Mid_PanelList.Expand(XP);
@@ -150,16 +140,16 @@ namespace WSV
         //汇总
         private void Pander_Count_Click(object sender, EventArgs e)
         {
-            //foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
-            //{
-            //    if (XP.Name == "Mid_Count")
-            //    {
-            //        XP.Visible = true;
-            //        Mid_PanelList.Expand(XP);
-            //    }
-            //    else
-            //        XP.Visible = false;
-            //}
+            foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
+            {
+                if (XP.Name == "Mid_Count")
+                {
+                    XP.Visible = true;
+                    Mid_PanelList.Expand(XP);
+                }
+                else
+                    XP.Visible = false;
+            }
         }
         //基础档案
         private void Pander_BaseInfo_Click(object sender, EventArgs e)
@@ -179,16 +169,16 @@ namespace WSV
         private void Pander_Plan_Click(object sender, EventArgs e)
         {
             //Pander_Plan.Visible = false;
-            //foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
-            //{
-            //    if (XP.Name == "Mid_Plan")
-            //    {
-            //        XP.Visible = true;
-            //        Mid_PanelList.Expand(XP);
-            //    }
-            //    else
-            //        XP.Visible = false;
-            //}
+            foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
+            {
+                if (XP.Name == "Mid_Plan")
+                {
+                    XP.Visible = true;
+                    Mid_PanelList.Expand(XP);
+                }
+                else
+                    XP.Visible = false;
+            }
         }
         //数据维护
         private void Pander_Defend_Click(object sender, EventArgs e)
@@ -249,16 +239,16 @@ namespace WSV
         //设备管理
         private void Pander_HardWare_Click(object sender, EventArgs e)
         {
-            //foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
-            //{
-            //    if (XP.Name == "Mid_HardWare")
-            //    {
-            //        XP.Visible = true;
-            //        Mid_PanelList.Expand(XP);
-            //    }
-            //    else
-            //        XP.Visible = false;
-            //}
+            foreach (Windows.Forms.XPanderPanel XP in this.Mid_PanelList.XPanderPanels)
+            {
+                if (XP.Name == "Mid_HardWare")
+                {
+                    XP.Visible = true;
+                    Mid_PanelList.Expand(XP);
+                }
+                else
+                    XP.Visible = false;
+            }
         }
         #endregion
 

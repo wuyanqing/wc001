@@ -63,8 +63,9 @@
             this.but_RSearch = new WSV.Control.Label.Label();
             this.panel_Fill = new System.Windows.Forms.Panel();
             this.Mid_PanelList = new Windows.Forms.XPanderPanelList();
-            this.Mid_Weight = new Windows.Forms.XPanderPanel();
-            this.btn_Weight = new WSV.Control.Label.Label();
+            this.Mid_Base = new Windows.Forms.XPanderPanel();
+            this.btn_Equipment = new WSV.Control.Label.Label();
+            this.btn_Supplier = new WSV.Control.Label.Label();
             this.Mid_Search = new Windows.Forms.XPanderPanel();
             this.btn_Search = new WSV.Control.Label.Label();
             this.Mid_Count = new Windows.Forms.XPanderPanel();
@@ -116,7 +117,7 @@
             this.panel1.SuspendLayout();
             this.panel_Fill.SuspendLayout();
             this.Mid_PanelList.SuspendLayout();
-            this.Mid_Weight.SuspendLayout();
+            this.Mid_Base.SuspendLayout();
             this.Mid_Search.SuspendLayout();
             this.Mid_Count.SuspendLayout();
             this.Mid_BaseInfo.SuspendLayout();
@@ -136,7 +137,7 @@
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(0, 0);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(456, 100);
+            this.panel_Top.Size = new System.Drawing.Size(436, 100);
             this.panel_Top.TabIndex = 2;
             // 
             // Pan_Top_Left
@@ -155,7 +156,7 @@
             this.Pan_Top_Right.BackgroundImage = global::WSV.Properties.Resources.Top_Right;
             this.Pan_Top_Right.Controls.Add(this.but_RHelp);
             this.Pan_Top_Right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Pan_Top_Right.Location = new System.Drawing.Point(255, 0);
+            this.Pan_Top_Right.Location = new System.Drawing.Point(235, 0);
             this.Pan_Top_Right.Name = "Pan_Top_Right";
             this.Pan_Top_Right.Size = new System.Drawing.Size(201, 100);
             this.Pan_Top_Right.TabIndex = 0;
@@ -184,7 +185,7 @@
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 100);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(180, 256);
+            this.panel_Left.Size = new System.Drawing.Size(180, 236);
             this.panel_Left.TabIndex = 3;
             // 
             // pan_Left
@@ -212,7 +213,7 @@
             this.pan_Left.Location = new System.Drawing.Point(0, 0);
             this.pan_Left.Name = "pan_Left";
             this.pan_Left.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.pan_Left.Size = new System.Drawing.Size(180, 256);
+            this.pan_Left.Size = new System.Drawing.Size(180, 236);
             this.pan_Left.TabIndex = 0;
             this.pan_Left.Text = "主菜单选项";
             // 
@@ -235,7 +236,7 @@
             this.PanelList_Tool.GradientBackground = System.Drawing.Color.Empty;
             this.PanelList_Tool.Location = new System.Drawing.Point(1, 26);
             this.PanelList_Tool.Name = "PanelList_Tool";
-            this.PanelList_Tool.Size = new System.Drawing.Size(178, 229);
+            this.PanelList_Tool.Size = new System.Drawing.Size(178, 209);
             this.PanelList_Tool.TabIndex = 0;
             this.PanelList_Tool.Text = "Main";
             this.PanelList_Tool.xpanderPanel = false;
@@ -255,14 +256,14 @@
             this.Pander_Weight.ColorFlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(226)))), ((int)(((byte)(205)))));
             this.Pander_Weight.ColorScheme = Windows.Forms.ColorScheme.Custom;
             this.Pander_Weight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Pander_Weight.Image = global::WSV.Properties.Resources.Tool_Weight;
+            this.Pander_Weight.Image = global::WSV.Properties.Resources.Tool_BaseInfo;
             this.Pander_Weight.ImageSizeWH = 32;
             this.Pander_Weight.InnerBorderColor = System.Drawing.Color.White;
             this.Pander_Weight.Name = "Pander_Weight";
             this.Pander_Weight.PanelStyle = Windows.Forms.PanelStyle.Default;
             this.Pander_Weight.Size = new System.Drawing.Size(178, 40);
             this.Pander_Weight.TabIndex = 0;
-            this.Pander_Weight.Text = "车辆过磅";
+            this.Pander_Weight.Text = "基础数据";
             this.Pander_Weight.Click += new System.EventHandler(this.Pander_Weight_Click);
             // 
             // Pander_Search
@@ -491,9 +492,9 @@
             this.panel_Right.BackColor = System.Drawing.SystemColors.Control;
             this.panel_Right.Controls.Add(this.panel1);
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Right.Location = new System.Drawing.Point(256, 100);
+            this.panel_Right.Location = new System.Drawing.Point(236, 100);
             this.panel_Right.Name = "panel_Right";
-            this.panel_Right.Size = new System.Drawing.Size(200, 256);
+            this.panel_Right.Size = new System.Drawing.Size(200, 236);
             this.panel_Right.TabIndex = 4;
             // 
             // panel1
@@ -532,7 +533,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.panel1.Size = new System.Drawing.Size(200, 256);
+            this.panel1.Size = new System.Drawing.Size(200, 236);
             this.panel1.TabIndex = 0;
             this.panel1.Text = "常用功能";
             // 
@@ -541,7 +542,7 @@
             this.but_RWeight.BackColor = System.Drawing.Color.Transparent;
             this.but_RWeight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.but_RWeight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.but_RWeight.Image = global::WSV.Properties.Resources.T_Weight;
+            this.but_RWeight.Image = global::WSV.Properties.Resources.T_Port;
             this.but_RWeight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.but_RWeight.Location = new System.Drawing.Point(5, 32);
             this.but_RWeight.LScale = 0.45F;
@@ -550,7 +551,7 @@
             this.but_RWeight.TabIndex = 2;
             this.but_RWeight.TabStop = true;
             this.but_RWeight.Tag = "Weight";
-            this.but_RWeight.Text = "过磅称重";
+            this.but_RWeight.Text = "设备维护";
             this.but_RWeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.but_RWeight.TScale = 0.45F;
             this.but_RWeight.Click += new System.EventHandler(this.but_RWeight_Click);
@@ -565,11 +566,11 @@
             this.but_RPrintMend.Location = new System.Drawing.Point(6, 67);
             this.but_RPrintMend.LScale = 0.45F;
             this.but_RPrintMend.Name = "but_RPrintMend";
-            this.but_RPrintMend.Size = new System.Drawing.Size(90, 32);
+            this.but_RPrintMend.Size = new System.Drawing.Size(114, 32);
             this.but_RPrintMend.TabIndex = 13;
             this.but_RPrintMend.TabStop = true;
             this.but_RPrintMend.Tag = "PrintMend";
-            this.but_RPrintMend.Text = "磅单补打";
+            this.but_RPrintMend.Text = "当天维护记录";
             this.but_RPrintMend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.but_RPrintMend.TScale = 0.45F;
             this.but_RPrintMend.Click += new System.EventHandler(this.but_RPrintMend_Click);
@@ -736,7 +737,7 @@
             this.panel_Fill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Fill.Location = new System.Drawing.Point(180, 100);
             this.panel_Fill.Name = "panel_Fill";
-            this.panel_Fill.Size = new System.Drawing.Size(76, 256);
+            this.panel_Fill.Size = new System.Drawing.Size(56, 236);
             this.panel_Fill.TabIndex = 5;
             this.panel_Fill.Resize += new System.EventHandler(this.panel_Fill_Resize);
             // 
@@ -744,7 +745,7 @@
             // 
             this.Mid_PanelList.CaptionStyle = Windows.Forms.CaptionStyle.Normal;
             this.Mid_PanelList.ColorScheme = Windows.Forms.ColorScheme.Custom;
-            this.Mid_PanelList.Controls.Add(this.Mid_Weight);
+            this.Mid_PanelList.Controls.Add(this.Mid_Base);
             this.Mid_PanelList.Controls.Add(this.Mid_Search);
             this.Mid_PanelList.Controls.Add(this.Mid_Count);
             this.Mid_PanelList.Controls.Add(this.Mid_BaseInfo);
@@ -758,54 +759,69 @@
             this.Mid_PanelList.GradientBackground = System.Drawing.Color.Empty;
             this.Mid_PanelList.Location = new System.Drawing.Point(0, 0);
             this.Mid_PanelList.Name = "Mid_PanelList";
-            this.Mid_PanelList.Size = new System.Drawing.Size(76, 256);
+            this.Mid_PanelList.Size = new System.Drawing.Size(56, 236);
             this.Mid_PanelList.TabIndex = 1;
             this.Mid_PanelList.Text = "xPanderPanelList1";
             this.Mid_PanelList.xpanderPanel = true;
             // 
-            // Mid_Weight
+            // Mid_Base
             // 
-            this.Mid_Weight.BackColor = System.Drawing.Color.Transparent;
-            this.Mid_Weight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(198)))));
-            this.Mid_Weight.CaptionFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mid_Weight.CaptionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Mid_Weight.CaptionHeight = 26;
-            this.Mid_Weight.CloseIconForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Mid_Weight.ColorCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(105)))), ((int)(((byte)(181)))));
-            this.Mid_Weight.ColorCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(105)))), ((int)(((byte)(181)))));
-            this.Mid_Weight.ColorCaptionGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(198)))));
-            this.Mid_Weight.ColorFlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(220)))), ((int)(((byte)(204)))));
-            this.Mid_Weight.ColorFlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(226)))), ((int)(((byte)(205)))));
-            this.Mid_Weight.ColorScheme = Windows.Forms.ColorScheme.Custom;
-            this.Mid_Weight.Controls.Add(this.btn_Weight);
-            this.Mid_Weight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Mid_Weight.Image = null;
-            this.Mid_Weight.ImageSizeWH = 16;
-            this.Mid_Weight.InnerBorderColor = System.Drawing.Color.White;
-            this.Mid_Weight.Name = "Mid_Weight";
-            this.Mid_Weight.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Weight.Size = new System.Drawing.Size(76, 26);
-            this.Mid_Weight.TabIndex = 0;
-            this.Mid_Weight.Text = "车辆过磅";
+            this.Mid_Base.BackColor = System.Drawing.Color.Transparent;
+            this.Mid_Base.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(198)))));
+            this.Mid_Base.CaptionFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mid_Base.CaptionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Mid_Base.CaptionHeight = 26;
+            this.Mid_Base.CloseIconForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Mid_Base.ColorCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(105)))), ((int)(((byte)(181)))));
+            this.Mid_Base.ColorCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(105)))), ((int)(((byte)(181)))));
+            this.Mid_Base.ColorCaptionGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(125)))), ((int)(((byte)(198)))));
+            this.Mid_Base.ColorFlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(220)))), ((int)(((byte)(204)))));
+            this.Mid_Base.ColorFlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(226)))), ((int)(((byte)(205)))));
+            this.Mid_Base.ColorScheme = Windows.Forms.ColorScheme.Custom;
+            this.Mid_Base.Controls.Add(this.btn_Equipment);
+            this.Mid_Base.Controls.Add(this.btn_Supplier);
+            this.Mid_Base.Expand = true;
+            this.Mid_Base.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Mid_Base.Image = null;
+            this.Mid_Base.ImageSizeWH = 16;
+            this.Mid_Base.InnerBorderColor = System.Drawing.Color.White;
+            this.Mid_Base.Name = "Mid_Base";
+            this.Mid_Base.PanelStyle = Windows.Forms.PanelStyle.Default;
+            this.Mid_Base.Size = new System.Drawing.Size(56, 2);
+            this.Mid_Base.TabIndex = 0;
+            this.Mid_Base.Text = "基础数据";
             // 
-            // btn_Weight
+            // btn_Equipment
             // 
-            this.btn_Weight.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btn_Weight.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Weight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Weight.Image = global::WSV.Properties.Resources.T_M_CarCode;
-            this.btn_Weight.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Weight.Location = new System.Drawing.Point(7, 37);
-            this.btn_Weight.LScale = 0.45F;
-            this.btn_Weight.Name = "btn_Weight";
-            this.btn_Weight.Size = new System.Drawing.Size(64, 64);
-            this.btn_Weight.TabIndex = 1;
-            this.btn_Weight.TabStop = true;
-            this.btn_Weight.Tag = "Weight";
-            this.btn_Weight.Text = "过磅称重";
-            this.btn_Weight.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Weight.TScale = 0.45F;
-            this.btn_Weight.Click += new System.EventHandler(this.but_RWeight_Click);
+            this.btn_Equipment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Equipment.Image = global::WSV.Properties.Resources.T_M_VCount;
+            this.btn_Equipment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Equipment.Location = new System.Drawing.Point(7, 36);
+            this.btn_Equipment.LScale = 0.3F;
+            this.btn_Equipment.Name = "btn_Equipment";
+            this.btn_Equipment.Size = new System.Drawing.Size(64, 64);
+            this.btn_Equipment.TabIndex = 0;
+            this.btn_Equipment.TabStop = true;
+            this.btn_Equipment.Tag = "Equipment";
+            this.btn_Equipment.Text = "设备信息";
+            this.btn_Equipment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Equipment.TScale = 0.45F;
+            // 
+            // btn_Supplier
+            // 
+            this.btn_Supplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Supplier.Image = global::WSV.Properties.Resources.T_M_VCount;
+            this.btn_Supplier.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Supplier.Location = new System.Drawing.Point(93, 36);
+            this.btn_Supplier.LScale = 0.6F;
+            this.btn_Supplier.Name = "btn_Supplier";
+            this.btn_Supplier.Size = new System.Drawing.Size(80, 64);
+            this.btn_Supplier.TabIndex = 1;
+            this.btn_Supplier.TabStop = true;
+            this.btn_Supplier.Tag = "Supplier";
+            this.btn_Supplier.Text = "供应商信息";
+            this.btn_Supplier.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Supplier.TScale = 0.45F;
             // 
             // Mid_Search
             // 
@@ -822,14 +838,13 @@
             this.Mid_Search.ColorFlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(226)))), ((int)(((byte)(205)))));
             this.Mid_Search.ColorScheme = Windows.Forms.ColorScheme.Custom;
             this.Mid_Search.Controls.Add(this.btn_Search);
-            this.Mid_Search.Expand = true;
             this.Mid_Search.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Mid_Search.Image = null;
             this.Mid_Search.ImageSizeWH = 16;
             this.Mid_Search.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_Search.Name = "Mid_Search";
             this.Mid_Search.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Search.Size = new System.Drawing.Size(76, 22);
+            this.Mid_Search.Size = new System.Drawing.Size(56, 26);
             this.Mid_Search.TabIndex = 1;
             this.Mid_Search.Text = "数据查询";
             this.Mid_Search.Visible = false;
@@ -873,7 +888,7 @@
             this.Mid_Count.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_Count.Name = "Mid_Count";
             this.Mid_Count.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Count.Size = new System.Drawing.Size(76, 26);
+            this.Mid_Count.Size = new System.Drawing.Size(56, 26);
             this.Mid_Count.TabIndex = 2;
             this.Mid_Count.Text = "汇总报表";
             this.Mid_Count.Visible = false;
@@ -936,7 +951,7 @@
             this.Mid_BaseInfo.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_BaseInfo.Name = "Mid_BaseInfo";
             this.Mid_BaseInfo.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_BaseInfo.Size = new System.Drawing.Size(76, 26);
+            this.Mid_BaseInfo.Size = new System.Drawing.Size(56, 26);
             this.Mid_BaseInfo.TabIndex = 3;
             this.Mid_BaseInfo.Text = "基础档案";
             this.Mid_BaseInfo.Visible = false;
@@ -1031,7 +1046,7 @@
             this.Mid_Plan.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_Plan.Name = "Mid_Plan";
             this.Mid_Plan.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Plan.Size = new System.Drawing.Size(76, 26);
+            this.Mid_Plan.Size = new System.Drawing.Size(56, 26);
             this.Mid_Plan.TabIndex = 9;
             this.Mid_Plan.Text = "维护计划";
             this.Mid_Plan.Visible = false;
@@ -1077,7 +1092,7 @@
             this.Mid_Defend.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_Defend.Name = "Mid_Defend";
             this.Mid_Defend.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Defend.Size = new System.Drawing.Size(76, 26);
+            this.Mid_Defend.Size = new System.Drawing.Size(56, 26);
             this.Mid_Defend.TabIndex = 4;
             this.Mid_Defend.Text = "数据维护";
             this.Mid_Defend.Visible = false;
@@ -1173,7 +1188,7 @@
             this.Mid_Log.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_Log.Name = "Mid_Log";
             this.Mid_Log.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_Log.Size = new System.Drawing.Size(76, 26);
+            this.Mid_Log.Size = new System.Drawing.Size(56, 26);
             this.Mid_Log.TabIndex = 5;
             this.Mid_Log.Text = "系统日志";
             this.Mid_Log.Visible = false;
@@ -1252,7 +1267,7 @@
             this.Mid_User.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_User.Name = "Mid_User";
             this.Mid_User.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_User.Size = new System.Drawing.Size(76, 26);
+            this.Mid_User.Size = new System.Drawing.Size(56, 26);
             this.Mid_User.TabIndex = 6;
             this.Mid_User.Text = "用户管理";
             this.Mid_User.Visible = false;
@@ -1337,7 +1352,7 @@
             this.Mid_System.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_System.Name = "Mid_System";
             this.Mid_System.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_System.Size = new System.Drawing.Size(76, 26);
+            this.Mid_System.Size = new System.Drawing.Size(56, 26);
             this.Mid_System.TabIndex = 7;
             this.Mid_System.Text = "系统管理";
             this.Mid_System.Visible = false;
@@ -1520,7 +1535,7 @@
             this.Mid_HardWare.InnerBorderColor = System.Drawing.Color.White;
             this.Mid_HardWare.Name = "Mid_HardWare";
             this.Mid_HardWare.PanelStyle = Windows.Forms.PanelStyle.Default;
-            this.Mid_HardWare.Size = new System.Drawing.Size(76, 26);
+            this.Mid_HardWare.Size = new System.Drawing.Size(56, 26);
             this.Mid_HardWare.TabIndex = 8;
             this.Mid_HardWare.Text = "设备管理";
             this.Mid_HardWare.Visible = false;
@@ -1632,7 +1647,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 356);
+            this.ClientSize = new System.Drawing.Size(436, 336);
             this.ControlBox = false;
             this.Controls.Add(this.panel_Fill);
             this.Controls.Add(this.panel_Right);
@@ -1658,7 +1673,7 @@
             this.panel1.ResumeLayout(false);
             this.panel_Fill.ResumeLayout(false);
             this.Mid_PanelList.ResumeLayout(false);
-            this.Mid_Weight.ResumeLayout(false);
+            this.Mid_Base.ResumeLayout(false);
             this.Mid_Search.ResumeLayout(false);
             this.Mid_Count.ResumeLayout(false);
             this.Mid_BaseInfo.ResumeLayout(false);
@@ -1691,10 +1706,11 @@
         private Windows.Forms.XPanderPanel Pander_System;
         private Windows.Forms.XPanderPanel Pander_HardWare;
         private Windows.Forms.XPanderPanelList Mid_PanelList;
-        private Windows.Forms.XPanderPanel Mid_Weight;
+        private Windows.Forms.XPanderPanel Mid_Base;
         private Windows.Forms.XPanderPanel Mid_Search;
         private Windows.Forms.Panel panel1;
-        private WSV.Control.Label.Label btn_Weight;
+        private WSV.Control.Label.Label btn_Equipment;
+        private WSV.Control.Label.Label btn_Supplier;
         private WSV.Control.Label.Label btn_Search;
         private Windows.Forms.XPanderPanel Mid_Count;
         private WSV.Control.Label.Label but_Count;
